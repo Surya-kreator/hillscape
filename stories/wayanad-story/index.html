@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wayanad's Wild Soul: Forest, Tribe & Tea | Hillscape</title>
+  <meta name="description" content="A journey through Kerala's most ecologically rich district — ancient Adivasi culture, Edakkal cave art, Chembra Peak, and tea estates where the mist never quite leaves. A luxury travel essay on Wayanad." />
+  <link rel="canonical" href="https://www.hillscape.netlify.app/stories/wayanad-story" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Wayanad's Wild Soul: Forest, Tribe & Tea" />
+  <meta property="og:description" content="Kerala's most ecologically rich district — ancient Adivasi culture meets pristine wilderness in the heart of the Western Ghats." />
+  <meta property="og:url" content="https://www.hillscape.netlify.app/stories/wayanad-story" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80" />
+  <meta property="og:site_name" content="Hillscape" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Wayanad's Wild Soul: Forest, Tribe & Tea" />
+  <meta name="twitter:description" content="Kerala's most ecologically rich district — Adivasi culture, cave art, peak mist, and forests that never really end." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Wayanad's Wild Soul: Forest, Tribe & Tea",
+    "description": "A journey through Kerala's most ecologically rich district — ancient Adivasi culture, Edakkal cave art, Chembra Peak, and tea estates where the mist never quite leaves.",
+    "image": "https://images.unsplash.com/photo-1448375240586-882707db888b?w=1200&q=80",
+    "author": { "@type": "Person", "name": "Nalini Varma" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hillscape",
+      "logo": { "@type": "ImageObject", "url": "https://www.hillscape.netlify.app/logo.png" }
+    },
+    "datePublished": "2026-06-04",
+    "dateModified": "2026-06-04",
+    "mainEntityOfPage": "https://www.hillscape.netlify.app/stories/wayanad-story",
+    "articleSection": "Travel",
+    "keywords": ["Wayanad","Kerala","Adivasi","Western Ghats","Chembra Peak","Edakkal Caves","wildlife","tea","forest","tribe"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&family=Outfit:wght@200;300;400;500&family=Yeseva+One&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --earth:      #1a1510;
+      --earth-mid:  #2d2318;
+      --earth-soft: #4a3c2e;
+      --soil:       #6b5544;
+      --clay:       #c17f4a;
+      --clay-lt:    #d99b68;
+      --moss:       #3d5c3a;
+      --moss-lt:    #5a8054;
+      --fern:       #7aab72;
+      --cream:      #f5f0e6;
+      --cream-warm: #ede5d8;
+      --cream-dim:  #d9cfc0;
+      --petal:      #e8c99a;
+      --mist-white: rgba(245,240,230,0.9);
+      --rule:       rgba(26,21,16,0.1);
+      --serif-h:    'Yeseva One', Georgia, serif;
+      --serif-b:    'Lora', Georgia, serif;
+      --sans:       'Outfit', system-ui, sans-serif;
+      --max-prose:  720px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--earth);
+      font-family: var(--serif-b);
+      font-weight: 400;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+
+    /* Organic noise overlay */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.022; pointer-events: none; z-index: 9999;
+    }
+
+    /* ── Progress Bar ── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0; height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--moss), var(--fern), var(--clay-lt));
+      z-index: 1001; transition: width 0.1s linear;
+      box-shadow: 0 0 10px rgba(61,92,58,0.5);
+    }
+
+    /* ── Site Header ── */
+    .site-header {
+      position: fixed; top: 3px; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 13px 36px;
+      background: rgba(245,240,230,0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .site-logo {
+      font-family: var(--sans); font-size: 0.7rem; font-weight: 500;
+      letter-spacing: 0.34em; text-transform: uppercase;
+      color: var(--moss); text-decoration: none;
+    }
+
+    .back-btn {
+      font-family: var(--sans); font-size: 0.66rem; font-weight: 300;
+      letter-spacing: 0.16em; text-transform: uppercase;
+      color: var(--soil); text-decoration: none;
+      border: 1px solid var(--rule); padding: 7px 18px; transition: all 0.22s;
+    }
+    .back-btn:hover { border-color: var(--clay); color: var(--clay); background: rgba(193,127,74,0.06); }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative; height: 100svh; min-height: 640px;
+      display: flex; align-items: flex-end; overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: center 38%;
+      transform: scale(1.08);
+      animation: hZoom 20s cubic-bezier(0.2,0,0.2,1) forwards;
+      filter: brightness(0.7) saturate(1.1);
+    }
+    @keyframes hZoom { to { transform: scale(1); } }
+
+    .hero-veil {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to top, rgba(26,21,16,0.96) 0%, rgba(26,21,16,0.5) 42%, rgba(26,21,16,0.08) 100%),
+        linear-gradient(to right, rgba(26,21,16,0.32) 0%, transparent 55%);
+    }
+
+    /* Top forest-green glow */
+    .hero-canopy {
+      position: absolute; top: 0; left: 0; right: 0; height: 200px;
+      background: linear-gradient(to bottom, rgba(61,92,58,0.25) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative; z-index: 2; width: 100%;
+      max-width: 960px; padding: 0 28px 76px;
+      animation: hUp 1.3s 0.4s both;
+    }
+    @keyframes hUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-kicker {
+      font-family: var(--sans); font-size: 0.6rem; font-weight: 400;
+      letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--fern); margin-bottom: 16px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .hero-kicker::before { content: ''; width: 42px; height: 1px; background: var(--moss); display: block; }
+
+    .hero-title {
+      font-family: var(--serif-h);
+      font-size: clamp(2.8rem, 7.5vw, 5.8rem);
+      line-height: 1.0; color: var(--cream);
+      letter-spacing: -0.01em; margin-bottom: 6px;
+    }
+
+    .hero-title .amp {
+      font-family: var(--serif-b);
+      font-style: italic; font-size: 0.78em;
+      color: var(--clay-lt);
+    }
+
+    .hero-sub {
+      font-family: var(--serif-b); font-style: italic;
+      font-size: clamp(1rem, 1.9vw, 1.18rem);
+      color: rgba(245,240,230,0.62);
+      max-width: 520px; line-height: 1.6; margin-bottom: 28px;
+    }
+
+    .hero-meta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .hero-meta span {
+      font-family: var(--sans); font-size: 0.74rem; font-weight: 300;
+      color: rgba(245,240,230,0.44); letter-spacing: 0.04em;
+    }
+    .hero-meta .sep { color: rgba(245,240,230,0.18); }
+
+    /* ── Layout ── */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr;
+      max-width: 1200px; margin: 0 auto;
+      padding: 72px 22px;
+    }
+    @media (min-width: 1080px) {
+      .article-layout { grid-template-columns: 204px 1fr; gap: 0 72px; padding: 92px 48px; }
+    }
+
+    /* ── TOC ── */
+    .toc-sidebar { display: none; }
+    @media (min-width: 1080px) {
+      .toc-sidebar { display: block; }
+      .toc-inner { position: sticky; top: 92px; }
+    }
+
+    .toc-label {
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 18px;
+    }
+
+    .toc-list { list-style: none; padding-left: 14px; border-left: 1px solid var(--rule); }
+    .toc-list li { margin-bottom: 13px; }
+    .toc-list a {
+      font-family: var(--sans); font-size: 0.75rem; font-weight: 300;
+      color: var(--soil); text-decoration: none; line-height: 1.45;
+      display: block; transition: color 0.2s; opacity: 0.7;
+    }
+    .toc-list a:hover, .toc-list a.active { color: var(--moss); opacity: 1; }
+
+    /* ── Prose ── */
+    .prose { max-width: var(--max-prose); }
+
+    .lead-paragraph {
+      font-family: var(--serif-b);
+      font-size: clamp(1.12rem, 2.2vw, 1.42rem);
+      font-weight: 400; line-height: 1.8; color: var(--earth);
+      margin-bottom: 52px; padding-bottom: 48px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .lead-paragraph::first-letter {
+      float: left; font-family: var(--serif-h);
+      font-size: 5.6em; line-height: 0.78;
+      margin: 0.04em 0.1em 0 0; color: var(--moss);
+    }
+
+    h2.section-heading {
+      font-family: var(--serif-h);
+      font-size: clamp(1.6rem, 3.4vw, 2.4rem);
+      color: var(--earth-mid); margin: 64px 0 20px;
+      line-height: 1.15; letter-spacing: 0.01em;
+    }
+
+    .prose p {
+      font-size: clamp(1rem, 1.7vw, 1.08rem);
+      color: var(--earth-soft); margin-bottom: 28px; line-height: 1.9;
+    }
+
+    .prose a {
+      color: var(--moss);
+      text-decoration: underline;
+      text-decoration-color: rgba(61,92,58,0.28);
+      text-underline-offset: 4px; transition: text-decoration-color 0.2s;
+    }
+    .prose a:hover { text-decoration-color: var(--moss); }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 56px 0;
+      padding: 36px 40px 36px 44px;
+      background: var(--cream-warm);
+      border-left: 3px solid var(--moss);
+      position: relative;
+    }
+    .pull-quote::before {
+      content: '\201C';
+      position: absolute; top: -8px; left: 24px;
+      font-family: var(--serif-h); font-size: 5.5rem;
+      color: var(--moss); line-height: 1; opacity: 0.15;
+    }
+    .pull-quote p {
+      font-family: var(--serif-b);
+      font-size: clamp(1.18rem, 2.4vw, 1.55rem) !important;
+      font-style: italic; font-weight: 400;
+      color: var(--earth-mid) !important;
+      line-height: 1.5; margin: 0 !important;
+    }
+
+    /* Tribe note — decorative inset */
+    .tribe-note {
+      margin: 44px 0;
+      padding: 28px 32px;
+      border: 1px solid rgba(61,92,58,0.18);
+      border-top: 2px solid var(--moss);
+      background: rgba(122,171,114,0.06);
+      position: relative;
+    }
+    .tribe-note-label {
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--moss); margin-bottom: 10px;
+    }
+    .tribe-note p {
+      font-family: var(--sans); font-size: 0.85rem; font-weight: 300;
+      line-height: 1.72; color: var(--earth-soft) !important;
+      margin: 0 !important;
+    }
+
+    /* ── Story Images ── */
+    .story-image { margin: 52px 0; }
+    .story-image img {
+      width: 100%; display: block;
+      height: clamp(230px, 44vw, 460px);
+      object-fit: cover;
+      filter: saturate(0.9) brightness(0.95);
+      transition: filter 0.4s;
+    }
+    .story-image:hover img { filter: saturate(1) brightness(1); }
+    .story-image figcaption {
+      font-family: var(--sans); font-size: 0.71rem; font-weight: 300;
+      color: var(--soil); letter-spacing: 0.04em; margin-top: 10px; opacity: 0.7;
+    }
+
+    .full-bleed { margin: 72px -22px; }
+    @media (min-width: 1080px) { .full-bleed { margin: 84px -48px; } }
+    .full-bleed img {
+      width: 100%; display: block;
+      height: clamp(300px, 50vw, 600px);
+      object-fit: cover;
+      filter: saturate(0.9) brightness(0.93);
+    }
+    .full-bleed figcaption {
+      font-family: var(--sans); font-size: 0.71rem; font-weight: 300;
+      color: var(--soil); letter-spacing: 0.04em;
+      margin-top: 10px; padding: 0 22px; opacity: 0.65;
+    }
+
+    .image-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 52px 0; }
+    .image-duo img {
+      width: 100%; display: block;
+      height: clamp(150px, 26vw, 300px);
+      object-fit: cover;
+      filter: saturate(0.88) brightness(0.92);
+    }
+    .image-duo figcaption {
+      font-family: var(--sans); font-size: 0.67rem; font-weight: 300;
+      color: var(--soil); margin-top: 8px; opacity: 0.65; line-height: 1.4;
+    }
+
+    /* Wide accent image — asymmetric crop */
+    .accent-image { margin: 52px 0; display: grid; grid-template-columns: 3fr 2fr; gap: 10px; }
+    .accent-image img {
+      width: 100%; display: block; object-fit: cover;
+      height: clamp(200px, 36vw, 400px);
+      filter: saturate(0.9) brightness(0.92);
+    }
+    .accent-image figcaption {
+      font-family: var(--sans); font-size: 0.67rem; font-weight: 300;
+      color: var(--soil); margin-top: 8px; opacity: 0.65; line-height: 1.4;
+    }
+
+    /* Ecology strip */
+    .ecology-strip {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1px; background: var(--rule);
+      border: 1px solid var(--rule); margin: 52px 0;
+    }
+    @media (min-width: 540px) { .ecology-strip { grid-template-columns: repeat(4, 1fr); } }
+    .eco-item {
+      background: var(--cream); padding: 22px 18px; text-align: center;
+    }
+    .eco-icon {
+      font-size: 1.6rem; display: block; margin-bottom: 8px; line-height: 1;
+    }
+    .eco-label {
+      font-family: var(--sans); font-size: 0.64rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--soil); display: block;
+    }
+    .eco-note {
+      font-family: var(--sans); font-size: 0.76rem; font-weight: 300;
+      color: var(--earth-soft); margin-top: 4px; display: block;
+    }
+
+    /* ── Article Footer ── */
+    .article-footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--rule); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+    .tag {
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 400;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--moss); border: 1px solid rgba(61,92,58,0.24);
+      padding: 5px 14px; text-decoration: none; transition: all 0.2s;
+    }
+    .tag:hover { background: var(--moss); color: var(--cream); }
+
+    /* ── Related Stories ── */
+    .related-section {
+      background: var(--cream-warm);
+      border-top: 1px solid var(--rule);
+      padding: 84px 22px;
+    }
+    @media (min-width: 768px) { .related-section { padding: 88px 48px; } }
+    .related-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--clay); margin-bottom: 40px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+    .related-grid { display: grid; grid-template-columns: 1fr; gap: 36px; }
+    @media (min-width: 580px) { .related-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (min-width: 880px) { .related-grid { grid-template-columns: repeat(3,1fr); } }
+
+    .related-card { text-decoration: none; display: block; }
+    .related-card-img { overflow: hidden; margin-bottom: 18px; }
+    .related-card img {
+      width: 100%; height: 192px; object-fit: cover; display: block;
+      filter: saturate(0.85) brightness(0.9);
+      transition: transform 0.5s ease, filter 0.35s;
+    }
+    .related-card:hover img { transform: scale(1.05); filter: saturate(1) brightness(0.96); }
+
+    .related-card-cat {
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--clay); margin-bottom: 8px;
+    }
+    .related-card-title {
+      font-family: var(--serif-h); font-size: 1.15rem;
+      color: var(--earth); line-height: 1.35; margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+    .related-card:hover .related-card-title { color: var(--moss); }
+    .related-card-excerpt {
+      font-family: var(--sans); font-size: 0.79rem; font-weight: 300;
+      color: var(--soil); line-height: 1.65;
+    }
+
+    /* ── Site Footer ── */
+    .site-footer {
+      background: var(--earth); text-align: center; padding: 40px 22px;
+      border-top: 3px solid var(--moss);
+    }
+    .site-footer a {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.26em; text-transform: uppercase;
+      color: var(--fern); text-decoration: none;
+    }
+    .site-footer p {
+      font-family: var(--sans); font-size: 0.68rem; font-weight: 300;
+      color: rgba(245,240,230,0.28); letter-spacing: 0.04em; margin-top: 10px;
+    }
+
+    /* ── Reveal ── */
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.72s ease, transform 0.72s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <header class="site-header" role="banner">
+    <a class="site-logo" href="/" aria-label="Hillscape Home">Hillscape</a>
+    <a class="back-btn" href="/">← All Stories</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Article hero">
+    <img
+      class="hero-img"
+      src="https://images.unsplash.com/photo-1619020905969-ba8d47f8c7cf?w=1900&q=85&auto=format&fit=crop"
+      alt="Dense tropical rainforest in Kerala's Western Ghats, morning light filtering through a multi-layered canopy of ancient trees, mist rising from the valley floor"
+    />
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-canopy" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-kicker">Kerala &mdash; Western Ghats &mdash; Biodiversity Hotspot</p>
+      <h1 class="hero-title">
+        Wayanad's<br />Wild Soul
+        <span class="amp"> &amp; </span>
+      </h1>
+      <p class="hero-sub">A journey through Kerala's most ecologically rich district, where ancient Adivasi culture meets pristine wilderness.</p>
+      <div class="hero-meta">
+        <span>By Hillscape Traveller</span>
+        <span class="sep">·</span>
+        <span><time datetime="2026-06-04">June 4, 2026</time></span>
+        <span class="sep">·</span>
+        <span id="read-time">9 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="article-layout">
+
+      <!-- TOC -->
+      <aside class="toc-sidebar" aria-label="Table of contents">
+        <nav class="toc-inner">
+          <p class="toc-label">The Journey</p>
+          <ul class="toc-list" id="toc-list">
+            <li><a href="#arrival">Entering the Forest</a></li>
+            <li><a href="#adivasi">Adivasi Voices</a></li>
+            <li><a href="#edakkal">Edakkal Caves</a></li>
+            <li><a href="#chembra">Chembra Peak</a></li>
+            <li><a href="#wildlife">Muthanga Wildlife</a></li>
+            <li><a href="#tea">Kalpetta & Tea</a></li>
+            <li><a href="#rivers">The Kabani River</a></li>
+            <li><a href="#leaving">On Leaving Slowly</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Article Body -->
+      <article class="prose" id="article-body">
+
+        <p class="lead-paragraph" id="arrival">
+          Wayanad announces itself before you see it. Coming up from Kozhikode on the National Highway, the road begins its climb through the Lakkidi Ghat — eighteen hairpin bends ascending nearly a thousand metres in under twenty kilometres — and somewhere around the seventh bend, the air changes. It cools and thickens and acquires a green density that feels almost audible, as though the forest is producing a frequency just below human hearing but entirely within human feeling. By the time the plateau opens and Wayanad spreads across your windscreen in forty shades of forest, the plains feel like something that happened to someone else.
+        </p>
+
+        <p class="reveal">This is Kerala's northernmost hill district, bounded by Karnataka and Tamil Nadu, occupying the upper Deccan plateau of the Western Ghats at elevations between 700 and 2,100 metres. It is one of the most biodiverse places on the Indian subcontinent — a UNESCO World Heritage site as part of the Western Ghats cluster, home to the largest Adivasi population in Kerala, and containing within its borders a density of forest, wildlife, waterfall, and living culture that most destinations spend decades trying to manufacture. Wayanad simply is. The difficulty is not finding things here. The difficulty is choosing which of them to attend to.</p>
+
+        <div class="ecology-strip reveal" aria-label="Wayanad ecology at a glance">
+          <div class="eco-item">
+            <span class="eco-icon">🌿</span>
+            <span class="eco-label">Flora</span>
+            <span class="eco-note">5,000+ plant species</span>
+          </div>
+          <div class="eco-item">
+            <span class="eco-icon">🐘</span>
+            <span class="eco-label">Fauna</span>
+            <span class="eco-note">Elephant, tiger, leopard</span>
+          </div>
+          <div class="eco-item">
+            <span class="eco-icon">🏛️</span>
+            <span class="eco-label">History</span>
+            <span class="eco-note">Cave art, 6000 BCE</span>
+          </div>
+          <div class="eco-item">
+            <span class="eco-icon">👥</span>
+            <span class="eco-label">Adivasi</span>
+            <span class="eco-note">18 indigenous tribes</span>
+          </div>
+        </div>
+
+        <h2 class="section-heading reveal" id="adivasi">The Adivasi Voices That Predate the Forest Road</h2>
+
+        <p class="reveal">Wayanad's eighteen Adivasi tribes — among them the Paniya, the Kurichya, the Kattunayaka, the Oorali, and the Mullukuruma — have lived in these forests for thousands of years. Their relationship with this landscape is not the relationship of inhabitants to a place but of authors to a text: they shaped it, named it, understood its seasonal rhythms, its medicinal logic, its spiritual geography, long before the rest of the world knew this plateau existed. To visit Wayanad without some engagement with that living culture is to visit the surface of something much deeper.</p>
+
+        <p class="reveal">My first full day was spent at the Uravu Bamboo Village near Thrikkaipetta, a social enterprise run by Adivasi artisans that produces bamboo products ranging from fine basketry to structural furniture. The workshop floor — open-sided, roofed with bamboo thatch, smelling of fresh-split cane — was occupied by a dozen craftspeople working in companionable silence, their hands moving with the particular surety of people who learned a technique before they learned to explain it. I sat with a young Paniya woman named Meena who was weaving a traditional rice-winnowing basket, and she showed me, patiently and without expectation that I would succeed, how to split a cane section with two thumbs. I did not succeed. The basket she was making was extraordinary.</p>
+
+        <div class="tribe-note reveal" aria-label="Cultural context">
+          <p class="tribe-note-label">On Engaging with Adivasi Communities</p>
+          <p>Responsible tourism in Wayanad means community-led experiences over voyeuristic village tours. Seek out enterprises like Uravu, the Wayanad Social Service Society, and government-accredited tribal tourism cooperatives that direct revenue to communities directly. Photograph only with explicit, informed consent.</p>
+        </div>
+
+        <!-- <figure class="story-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&auto=format&fit=crop"
+            alt="Traditional bamboo craft workshop in the Western Ghats, artisan hands weaving intricate basket patterns, forest background"
+            loading="lazy"
+          />
+          <figcaption>Uravu Bamboo Village — Adivasi craft that encodes centuries of forest knowledge in every split cane.</figcaption>
+        </figure> -->
+
+        <h2 class="section-heading reveal" id="edakkal">Edakkal: Where History Is Carved Into Stone</h2>
+
+        <p class="reveal">The most startling thing about the Edakkal Caves is not the petroglyphs themselves — extraordinary as they are — but the location. These are not caves in the usual sense: they are a fissure in a single enormous boulder on the summit of Ambukuthi Mala, created when a section of rock split along a fault line, leaving a long narrow chamber open to light from above. The climb to reach them is forty-five minutes on a well-maintained trail through forest that grows thicker and stranger as you ascend, the trees draped in lichen, the path edged with giant cardamom that grows here without cultivation.</p>
+
+        <p class="reveal">The petroglyphs inside — geometric symbols, human figures, animal outlines, a wheeled vehicle that has been dated to the Neolithic period and reads as startlingly modern — cover the walls in three distinct layers of carving spanning roughly eight thousand years. The oldest are thought to date to around 6,000 BCE. Standing in that narrow stone corridor, reading figures scratched into rock by hands that predate every civilisation I know anything about, is an experience that is difficult to absorb in a single visit. I went twice, once in morning and once in late afternoon when the light through the fissure is oblique and the carvings cast their own shadows, becoming briefly three-dimensional and alive.</p>
+
+        <figure class="full-bleed reveal">
+          <img
+            src="3_kodaikanal_boating_guide/images/edakkal_cave.jpg"
+            alt="Ancient rock carved with prehistoric symbols and human figures inside a dramatic stone fissure, dappled light from above"
+            loading="lazy"
+          />
+          <figcaption>Edakkal Caves — eight thousand years of human mark-making in a single stone corridor on Ambukuthi Mala.</figcaption>
+        </figure>
+
+        <h2 class="section-heading reveal" id="chembra">Chembra Peak: The Heart-Shaped Lake Above the World</h2>
+
+        <p class="reveal">At 2,100 metres, Chembra Peak is the highest point in Wayanad and the second highest in the Nilgiris after Doddabetta. The trek from Meppadi takes four to five hours return, rising through grassland and shola forest on a trail that is well-marked in its lower sections and requires some route-finding above the treeline. The permit system — trekkers register at the forest department checkpoint and are assigned a guide — means the mountain is never crowded, and the early morning slots are frequently near-empty.</p>
+
+        <p class="reveal">The famous feature of the Chembra ascent is a heart-shaped lake at 1,800 metres — a natural formation that maintains its shape year-round, fed by springs rather than rainfall, fringed with the short alpine grass that characterises the upper plateau. I reached it at eight-thirty on a Wednesday with a guide named Suresh who carried nothing but a small bag and moved through the grassland with the unhurried efficiency of someone for whom this is a commute rather than an adventure. The lake was perfectly still and perfectly heart-shaped and reflected, in its middle section, a column of cloud so precisely vertical it looked architectural. I sat beside it for thirty minutes before continuing to the summit, and felt, in the specific way high places produce, very small and very calm simultaneously.</p>
+
+        <div class="pull-quote reveal">
+          <p>High places produce a particular kind of calm — not the absence of thought but the gentle irrelevance of the thoughts you normally carry. Chembra gave me two hours of that. It is not a small gift.</p>
+        </div>
+
+        <div class="image-duo reveal">
+          <!-- <figure>
+            <img
+              src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&auto=format&fit=crop"
+              alt="Trekker on a highland grassland trail with shola forest below and cloudy summit above, Western Ghats"
+              loading="lazy"
+            />
+            <figcaption>The Chembra ascent above the treeline — grassland, cloud, and the faint smell of wild ginger.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80&auto=format&fit=crop"
+              alt="Heart-shaped lake on a mountain plateau surrounded by green grassland, cloud reflections on still water"
+              loading="lazy"
+            />
+            <figcaption>The heart lake at 1,800 m — spring-fed, year-round, precisely shaped.</figcaption>
+          </figure> -->
+        </div>
+
+        <h2 class="section-heading reveal" id="wildlife">Muthanga: Dawn in the Elephant Corridor</h2>
+
+        <p class="reveal">The Muthanga Wildlife Sanctuary occupies the eastern edge of Wayanad, sharing a porous border with Karnataka's Nagarhole National Park and Tamil Nadu's Mudumalai. Together, these three reserves form one of the largest contiguous wildlife corridors in South Asia — roughly 5,500 square kilometres of protected forest through which elephants, tigers, leopards, sloth bears, and wild dogs move according to their own unmapped geography, indifferent to administrative boundaries. Muthanga itself covers 345 square kilometres and is perhaps best known as elephant country: the herds here are large, well-studied, and — if you encounter them from a sanctioned jeep at a respectful distance — among the most moving wildlife encounters available in South India.</p>
+
+        <p class="reveal">I joined the dawn safari, which departs at six and covers a designated forest circuit over two hours. Our jeep — a battered open-topped vehicle driven by a man named Thomas who had been leading these safaris for fourteen years and possessed the particular gift of knowing when to stop and say nothing — found a herd of eleven Asian elephants in the teak forest thirty minutes in. A young bull was separating himself from the group, his ears fanning slowly in the cool morning air. We stayed for twenty minutes. No one spoke. The forest around the herd had that charged, held-breath quality that large wild animals produce in their proximity — the sense that you are permitted here, that the permission is conditional, and that the conditions are theirs to set.</p>
+
+        <h2 class="section-heading reveal" id="tea">Kalpetta, the Spice Markets, and Tea at Altitude</h2>
+
+        <p class="reveal">Wayanad's district capital Kalpetta is a functional market town rather than a scenic destination, and is better for it. Its morning spice market — operating daily from five until nine — is among the most aromatic spaces I have visited anywhere: stalls selling fresh cardamom (Wayanad grows roughly thirty percent of India's total cardamom production), black pepper still on the vine, dried ginger, nutmeg, vanilla pods, and the small, intensely flavoured Wayanad coffee beans that are gaining a serious following among specialty roasters. I bought more than I could realistically carry. The market vendors were accustomed to this outcome and provided string bags without being asked.</p>
+
+        <p class="reveal">The district's tea estates are quieter than those of Munnar but comparable in quality, particularly those at higher elevations around Lakkidi where the altitude and the specific mineral composition of the soil produce a light, floral orthodox tea with a brightness that announces itself even before you add anything. I visited the Wayanad Heritage Tea Factory near Vythiri, where the withering lofts and rolling machines date to the 1930s and are still operational, and drank a first-flush in the tasting room with a view down into a valley so green it seemed to be producing its own light.</p>
+
+        <!-- <figure class="story-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1587474260584-136574528ed5?w=900&q=80&auto=format&fit=crop"
+            alt="Tea estate in early morning at high altitude, neat rows of tea bushes on a hillside, mist filling the valley below"
+            loading="lazy"
+          />
+          <figcaption>Lakkidi tea estates at first light — altitude, mineral soil, and a first-flush that announces itself.</figcaption>
+        </figure> -->
+
+        <h2 class="section-heading reveal" id="rivers">The Kabani River at Evening</h2>
+
+        <p class="reveal">The Kabani River — which rises in the Brahmagiri range, flows through Wayanad's eastern forests, and eventually joins the Kaveri in Karnataka — is Wayanad at its least complicated. In the evenings, particularly at the shallow crossing near Thirunelli, the river runs clear over flat granite and the light comes through the trees at an angle that turns everything the colour of old honey. I sat on a rock in the middle of the river for an hour on my penultimate evening, shoes in my hand, watching a pair of kingfishers work the upstream shallows with the focused intensity of professionals. The water was cold and the granite was warm and the forest on both banks was very close and very quiet and very alive.</p>
+
+        <p class="reveal">Nearby, the Thirunelli Temple — an ancient Vishnu shrine built in the Kerala nagara style, positioned at the confluence of eighteen streams at the foot of the Brahmagiri hills — provides a different kind of stillness. The temple's origins are unclear, its consecration possibly predating the Common Era, and the forest around it is protected as temple land, meaning the trees here are old in a way that most Wayanad forest no longer is: gnarled, enormous, their root systems building the hillside they inhabit. I arrived as the evening lamp-lighting ceremony was beginning and stayed through it in the outer courtyard, listening to the bells carry across the river.</p>
+
+        <h2 class="section-heading reveal" id="leaving">On Leaving: What the Forest Keeps</h2>
+
+        <p class="reveal">My last morning in Wayanad was spent doing almost nothing. I sat on the veranda of my guesthouse — a converted planter's bungalow above Ambalavayal, its garden backing onto a section of forest reserve — and watched the mist resolve itself. It does this slowly here, in layers: first the treeline becomes visible, then the middle canopy, then the lower forest, then the agricultural land between the forest and the road, and finally the road itself, which in Wayanad is always narrower than you remembered it and always more beautiful for the thing growing on either side.</p>
+
+        <div class="pull-quote reveal">
+          <p>Wayanad does not release you easily. It is a place that inserts itself into the ongoing conversation you have with yourself about how you want to live — and it takes a position in that conversation that is difficult to argue with.</p>
+        </div>
+
+        <p class="reveal">The drive out through Lakkidi Ghat is the drive in reversed, the temperature rising with each hairpin, the forest thinning, the plateau retreating in the rearview mirror. By the time the Kozhikode plain opens below, Wayanad is already becoming a kind of dream — too green, too cool, too rich in living things to be entirely real from this altitude and this heat. But it is real. The cardamom in my bag smells real. The elephant in the dawn forest was real. The eight-thousand-year-old hand that pressed a figure into a rock wall was real, and the hand that traced it on a cave wall, and the river that ran cold over granite while kingfishers worked the shallows. All of it real, and all of it, now, held.</p>
+
+        <div class="article-footer reveal">
+          <!-- <div class="tags" aria-label="Article tags">
+            <a class="tag" href="/tag/wayanad">Wayanad</a>
+            <a class="tag" href="/tag/kerala">Kerala</a>
+            <a class="tag" href="/tag/western-ghats">Western Ghats</a>
+            <a class="tag" href="/tag/adivasi">Adivasi Culture</a>
+            <a class="tag" href="/tag/wildlife">Wildlife</a>
+            <a class="tag" href="/tag/trekking">Trekking</a>
+            <a class="tag" href="/tag/heritage">Heritage</a>
+          </div> -->
+          <a class="back-btn" href="/" style="display:inline-block;margin-top:8px;">← Back to Hillscape</a>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- Related Stories -->
+    <section class="related-section" aria-label="Related stories">
+      <div class="related-inner">
+        <p class="section-label">More Wild Kerala</p>
+        <div class="related-grid">
+
+          <a class="related-card" href="/stories/kodaikanal-story">
+            <div class="related-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1692792284356-f80113facd09?w=600&q=75&auto=format&fit=crop"
+                alt="Pine forest in early morning mist, Kodaikanal Palani Hills"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">Palani Hills</p>
+            <h3 class="related-card-title">Into the Silver Mist of Kodaikanal</h3>
+            <p class="related-card-excerpt">Pine mist, a star-shaped lake, chocolate made by hand — Kodaikanal at its slow, unhurried best.</p>
+          </a>
+
+          <a class="related-card" href="/stories/ooty-story">
+            <div class="related-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1660918738010-295b09857f93?w=600&q=75&auto=format&fit=crop"
+                alt="Rolling Nilgiri hills at golden hour, layers of blue ridges"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">The Nilgiris</p>
+            <h3 class="related-card-title">72 Hours in Ooty: A Blue Mountain Odyssey</h3>
+            <p class="related-card-excerpt">Toy trains, botanical gardens, Doddabetta at dawn — the Queen of Hill Stations in three unhurried days.</p>
+          </a>
+
+          <a class="related-card" href="/stories/coorg-story">
+            <div class="related-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1710612198146-77512950a4b7?w=600&q=75&auto=format&fit=crop"
+                alt="Forested valley in Karnataka during monsoon, clouds low over green hills, waterfalls visible on distant slopes"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">Monsoon Escapes</p>
+            <h3 class="related-card-title">Coorg in the Rain: A Guide to Arriving Wet</h3>
+            <p class="related-card-excerpt">The Scotland of India at its most dramatic — why Coorg's monsoon season is its best-kept secret.</p>
+          </a>
+
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <a href="https://www.hillscape.netlify.app">Hillscape</a>
+    <p>&copy; 2026 Hillscape Magazine. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Progress bar
+    const bar = document.getElementById('progress-bar');
+    function updateProgress() {
+      const art = document.getElementById('article-body');
+      const total = art.offsetHeight - window.innerHeight;
+      const pct = Math.min(100, Math.max(0, -art.getBoundingClientRect().top / total * 100));
+      bar.style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', Math.round(pct));
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // Reading time
+    const wc = (document.getElementById('article-body').innerText || '').split(/\s+/).filter(Boolean).length;
+    document.getElementById('read-time').textContent = Math.ceil(wc / 220) + ' min read';
+
+    // Scroll reveal
+    const ro = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } });
+    }, { threshold: 0.09 });
+    document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+    // Active TOC
+    const ids = ['arrival','adivasi','edakkal','chembra','wildlife','tea','rivers','leaving'];
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const to = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const lnk = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+          if (lnk) lnk.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-28% 0px -62% 0px' });
+    ids.map(id => document.getElementById(id)).filter(Boolean).forEach(el => to.observe(el));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>72 Hours in Ooty: A Blue Mountain Odyssey | Hillscape</title>
+  <meta name="description" content="From fog-wrapped botanical gardens to the last toy train to Coonoor as dusk paints the Nilgiris amber — a definitive luxury travel guide to Ooty, the Queen of Hill Stations." />
+  <link rel="canonical" href="https://www.hillscape.netlify.app/stories/ooty-story" />
+
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="72 Hours in Ooty: A Blue Mountain Odyssey" />
+  <meta property="og:description" content="From fog-wrapped botanical gardens to the last toy train to Coonoor — a definitive guide to the Queen of Hill Stations." />
+  <meta property="og:url" content="https://www.hillscape.netlify.app/stories/ooty-story" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=1200&q=80" />
+  <meta property="og:site_name" content="Hillscape" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="72 Hours in Ooty: A Blue Mountain Odyssey" />
+  <meta name="twitter:description" content="The Queen of Hill Stations — fog, tea, toy trains, and 72 hours that move at a different pace." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=1200&q=80" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "72 Hours in Ooty: A Blue Mountain Odyssey",
+    "description": "From fog-wrapped botanical gardens to the last toy train to Coonoor as dusk paints the Nilgiris amber — a definitive luxury travel guide to Ooty.",
+    "image": "https://images.unsplash.com/photo-1465146344425-f00d5f5c8f07?w=1200&q=80",
+    "author": { "@type": "Person", "name": "Arjun Krishnamurthy" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hillscape",
+      "logo": { "@type": "ImageObject", "url": "https://www.hillscape.netlify.app/logo.png" }
+    },
+    "datePublished": "2026-06-04",
+    "dateModified": "2026-06-04",
+    "mainEntityOfPage": "https://www.hillscape.netlify.app/stories/ooty-story",
+    "articleSection": "Travel",
+    "keywords": ["Ooty","Udhagamandalam","Nilgiris","toy train","hill station","Tamil Nadu","Blue Mountains","Coonoor"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=Instrument+Sans:wght@300;400;500&family=Spectral:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --paper:      #f7f3ed;
+      --paper-warm: #f0e9df;
+      --paper-dim:  #e5ddd3;
+      --ink:        #1c1814;
+      --ink-mid:    #3a342e;
+      --ink-soft:   #6b6056;
+      --copper:     #a0522d;
+      --copper-lt:  #c07444;
+      --amber:      #d4881e;
+      --amber-lt:   #e9a83a;
+      --sage:       #5a6e52;
+      --sage-lt:    #7a9070;
+      --blue-hill:  #4a6480;
+      --blue-lt:    #6b8fae;
+      --rule:       rgba(28,24,20,0.1);
+      --serif-d:    'Fraunces', Georgia, serif;
+      --serif-b:    'Spectral', Georgia, serif;
+      --sans:       'Instrument Sans', system-ui, sans-serif;
+      --max-prose:  730px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif-b);
+      font-weight: 300;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+
+    /* Subtle paper texture via pseudo */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 39px, rgba(28,24,20,0.025) 40px),
+        repeating-linear-gradient(90deg, transparent, transparent 39px, rgba(28,24,20,0.012) 40px);
+      pointer-events: none;
+      z-index: 9998;
+    }
+
+    /* ── Progress Bar ── */
+    #progress-bar {
+      position: fixed; top: 0; left: 0;
+      height: 3px; width: 0%;
+      background: linear-gradient(90deg, var(--blue-hill), var(--blue-lt), var(--amber-lt));
+      z-index: 1001;
+      transition: width 0.1s linear;
+      box-shadow: 0 0 8px rgba(74,100,128,0.5);
+    }
+
+    /* ── Site Header ── */
+    .site-header {
+      position: fixed; top: 3px; left: 0; right: 0; z-index: 1000;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 14px 36px;
+      background: rgba(247,243,237,0.93);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .site-logo {
+      font-family: var(--sans);
+      font-size: 0.72rem; font-weight: 500;
+      letter-spacing: 0.32em; text-transform: uppercase;
+      color: var(--blue-hill); text-decoration: none;
+    }
+
+    .back-btn {
+      font-family: var(--sans);
+      font-size: 0.68rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--ink-soft); text-decoration: none;
+      border: 1px solid var(--rule);
+      padding: 7px 18px; transition: all 0.22s;
+    }
+    .back-btn:hover { border-color: var(--copper); color: var(--copper); background: rgba(160,82,45,0.04); }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative; height: 100svh; min-height: 620px;
+      display: flex; align-items: flex-end; overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: center 45%;
+      transform: scale(1.07);
+      animation: heroZoom 18s cubic-bezier(0.25,0,0.25,1) forwards;
+      filter: brightness(0.78) saturate(0.9) sepia(0.12);
+    }
+    @keyframes heroZoom { to { transform: scale(1); } }
+
+    .hero-gradient {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to top, rgba(28,24,20,0.92) 0%, rgba(28,24,20,0.45) 45%, rgba(28,24,20,0.08) 100%);
+    }
+
+    /* Amber tone-wash at top */
+    .hero-glow {
+      position: absolute; top: 0; left: 0; right: 0; height: 280px;
+      background: linear-gradient(to bottom, rgba(212,136,30,0.12) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative; z-index: 2;
+      width: 100%; max-width: 920px;
+      padding: 0 28px 72px;
+      animation: heroUp 1.2s 0.5s both;
+    }
+    @keyframes heroUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-eyebrow {
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--amber-lt); margin-bottom: 18px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-eyebrow::before { content: ''; width: 36px; height: 1px; background: var(--amber); display: block; }
+
+    .hero-title {
+      font-family: var(--serif-d);
+      font-size: clamp(2.8rem, 7.5vw, 5.6rem);
+      font-weight: 300; line-height: 1.0;
+      color: #f5f0e8; letter-spacing: -0.015em;
+      margin-bottom: 14px;
+    }
+    .hero-title .sub {
+      display: block; font-style: italic;
+      font-size: 0.54em; color: var(--amber-lt);
+      letter-spacing: 0.01em; margin-top: 6px;
+      font-weight: 300;
+    }
+
+    .hero-deck {
+      font-family: var(--serif-b); font-style: italic;
+      font-size: clamp(0.92rem, 1.8vw, 1.12rem);
+      color: rgba(245,240,232,0.68);
+      max-width: 560px; line-height: 1.65; margin-bottom: 28px;
+    }
+
+    .hero-meta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .hero-meta span {
+      font-family: var(--sans); font-size: 0.74rem; font-weight: 300;
+      color: rgba(245,240,232,0.48); letter-spacing: 0.04em;
+    }
+    .hero-meta .sep { color: rgba(245,240,232,0.2); }
+
+    /* ── Layout ── */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr;
+      max-width: 1200px; margin: 0 auto;
+      padding: 68px 22px;
+    }
+    @media (min-width: 1080px) {
+      .article-layout {
+        grid-template-columns: 210px 1fr;
+        gap: 0 68px; padding: 88px 48px;
+      }
+    }
+
+    /* ── TOC ── */
+    .toc-sidebar { display: none; }
+    @media (min-width: 1080px) {
+      .toc-sidebar { display: block; }
+      .toc-inner { position: sticky; top: 96px; }
+    }
+
+    .toc-label {
+      font-family: var(--sans); font-size: 0.58rem; font-weight: 500;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--copper); margin-bottom: 18px;
+    }
+
+    .toc-list { list-style: none; border-left: 1px solid var(--rule); padding-left: 16px; }
+    .toc-list li { margin-bottom: 13px; }
+    .toc-list a {
+      font-family: var(--sans); font-size: 0.76rem; font-weight: 300;
+      color: var(--ink-soft); text-decoration: none; line-height: 1.45;
+      display: block; transition: color 0.2s;
+    }
+    .toc-list a:hover,
+    .toc-list a.active { color: var(--copper); }
+
+    /* Day badges */
+    .day-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--paper); background: var(--blue-hill);
+      padding: 5px 14px; margin-bottom: 14px;
+    }
+
+    /* ── Prose ── */
+    .prose { max-width: var(--max-prose); }
+
+    .lead-paragraph {
+      font-family: var(--serif-b);
+      font-size: clamp(1.15rem, 2.2vw, 1.42rem);
+      font-weight: 300; line-height: 1.8; color: var(--ink);
+      margin-bottom: 48px; padding-bottom: 44px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .lead-paragraph::first-letter {
+      float: left; font-family: var(--serif-d);
+      font-size: 5.4em; line-height: 0.8;
+      margin: 0.06em 0.12em 0 0;
+      color: var(--blue-hill); font-weight: 400;
+    }
+
+    h2.section-heading {
+      font-family: var(--serif-d);
+      font-size: clamp(1.55rem, 3.2vw, 2.3rem);
+      font-weight: 300; color: var(--ink);
+      margin: 60px 0 18px; line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    h2.section-heading em { font-style: italic; color: var(--copper); }
+
+    .prose p {
+      font-size: clamp(1rem, 1.7vw, 1.08rem);
+      color: var(--ink-mid); margin-bottom: 26px; line-height: 1.9;
+    }
+
+    .prose a {
+      color: var(--blue-hill);
+      text-decoration: underline;
+      text-decoration-color: rgba(74,100,128,0.28);
+      text-underline-offset: 4px; transition: text-decoration-color 0.2s;
+    }
+    .prose a:hover { text-decoration-color: var(--blue-hill); }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 52px 0; padding: 0 0 0 32px;
+      border-left: 3px solid var(--amber);
+      position: relative;
+    }
+    .pull-quote p {
+      font-family: var(--serif-d);
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem) !important;
+      font-style: italic; font-weight: 300;
+      color: var(--ink) !important; line-height: 1.45; margin: 0 !important;
+    }
+    .pull-quote cite {
+      display: block; margin-top: 12px;
+      font-family: var(--sans); font-size: 0.7rem;
+      font-weight: 300; letter-spacing: 0.1em;
+      color: var(--ink-soft); font-style: normal;
+    }
+
+    /* Itinerary card */
+    .itinerary-card {
+      background: var(--paper-warm);
+      border: 1px solid var(--rule);
+      padding: 28px 32px; margin: 44px 0;
+      border-top: 3px solid var(--copper);
+    }
+    .itinerary-card h3 {
+      font-family: var(--sans); font-size: 0.68rem; font-weight: 500;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--copper); margin-bottom: 16px;
+    }
+    .itinerary-card ol {
+      padding-left: 20px; color: var(--ink-mid);
+      font-family: var(--sans); font-size: 0.84rem;
+      font-weight: 300; line-height: 1.7;
+    }
+    .itinerary-card ol li { margin-bottom: 6px; }
+    .itinerary-card ol li strong { font-weight: 500; color: var(--ink); }
+
+    /* ── Story Images ── */
+    .story-image { margin: 52px 0; }
+
+    .story-image img {
+      width: 100%; display: block;
+      height: clamp(220px, 44vw, 460px);
+      object-fit: cover;
+      filter: sepia(0.06) brightness(0.96);
+      transition: filter 0.4s;
+    }
+    .story-image:hover img { filter: sepia(0) brightness(1); }
+
+    .story-image figcaption {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 300;
+      color: var(--ink-soft); letter-spacing: 0.04em;
+      margin-top: 10px; opacity: 0.75;
+    }
+
+    .full-bleed { margin: 70px -22px; }
+    @media (min-width: 1080px) { .full-bleed { margin: 80px -48px; } }
+
+    .full-bleed img {
+      width: 100%; display: block;
+      height: clamp(300px, 48vw, 580px);
+      object-fit: cover;
+      filter: sepia(0.08) brightness(0.94);
+    }
+    .full-bleed figcaption {
+      font-family: var(--sans); font-size: 0.72rem; font-weight: 300;
+      color: var(--ink-soft); letter-spacing: 0.04em;
+      margin-top: 10px; padding: 0 22px; opacity: 0.68;
+    }
+
+    .image-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 52px 0; }
+    .image-duo img {
+      width: 100%; display: block;
+      height: clamp(148px, 25vw, 290px); object-fit: cover;
+      filter: sepia(0.07) brightness(0.92);
+    }
+    .image-duo figcaption {
+      font-family: var(--sans); font-size: 0.68rem; font-weight: 300;
+      color: var(--ink-soft); margin-top: 8px; opacity: 0.65; line-height: 1.4;
+    }
+
+    /* Stat strip */
+    .stat-strip {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      border: 1px solid var(--rule); margin: 52px 0;
+    }
+    .stat-item {
+      padding: 22px 20px; text-align: center;
+      border-right: 1px solid var(--rule);
+    }
+    .stat-item:last-child { border-right: none; }
+    .stat-num {
+      font-family: var(--serif-d); font-size: 2.4rem;
+      font-weight: 300; font-style: italic;
+      color: var(--blue-hill); line-height: 1; display: block; margin-bottom: 6px;
+    }
+    .stat-label {
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 400;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft);
+    }
+
+    /* ── Article Footer ── */
+    .article-footer { margin-top: 80px; padding-top: 40px; border-top: 1px solid var(--rule); }
+
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px; }
+    .tag {
+      font-family: var(--sans); font-size: 0.62rem; font-weight: 500;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--blue-hill); border: 1px solid rgba(74,100,128,0.28);
+      padding: 5px 14px; text-decoration: none; transition: all 0.2s;
+    }
+    .tag:hover { background: var(--blue-hill); color: var(--paper); }
+
+    /* ── Related Stories ── */
+    .related-section {
+      background: var(--paper-warm);
+      border-top: 1px solid var(--rule);
+      padding: 80px 22px;
+    }
+    @media (min-width: 768px) { .related-section { padding: 88px 48px; } }
+
+    .related-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.28em; text-transform: uppercase;
+      color: var(--copper); margin-bottom: 40px;
+      display: flex; align-items: center; gap: 14px;
+    }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+
+    .related-grid {
+      display: grid; grid-template-columns: 1fr; gap: 36px;
+    }
+    @media (min-width: 580px) { .related-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (min-width: 880px) { .related-grid { grid-template-columns: repeat(3,1fr); } }
+
+    .related-card { text-decoration: none; display: block; }
+    .related-card-img { overflow: hidden; margin-bottom: 18px; }
+    .related-card img {
+      width: 100%; height: 196px; object-fit: cover; display: block;
+      filter: sepia(0.1) brightness(0.9);
+      transition: transform 0.5s ease, filter 0.3s;
+    }
+    .related-card:hover img { transform: scale(1.05); filter: sepia(0) brightness(0.96); }
+
+    .related-card-cat {
+      font-family: var(--sans); font-size: 0.6rem; font-weight: 500;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--copper); margin-bottom: 8px;
+    }
+    .related-card-title {
+      font-family: var(--serif-d); font-size: 1.18rem; font-weight: 300;
+      color: var(--ink); line-height: 1.35; margin-bottom: 10px; transition: color 0.2s;
+    }
+    .related-card:hover .related-card-title { color: var(--blue-hill); }
+    .related-card-excerpt {
+      font-family: var(--sans); font-size: 0.79rem; font-weight: 300;
+      color: var(--ink-soft); line-height: 1.65;
+    }
+
+    /* ── Site Footer ── */
+    .site-footer {
+      background: var(--ink); text-align: center; padding: 40px 22px;
+      border-top: 3px solid var(--copper);
+    }
+    .site-footer a {
+      font-family: var(--sans); font-size: 0.74rem; font-weight: 500;
+      letter-spacing: 0.24em; text-transform: uppercase;
+      color: var(--amber-lt); text-decoration: none;
+    }
+    .site-footer p {
+      font-family: var(--sans); font-size: 0.7rem; font-weight: 300;
+      color: rgba(245,240,232,0.32); letter-spacing: 0.04em; margin-top: 10px;
+    }
+
+    /* ── Reveal ── */
+    .reveal {
+      opacity: 0; transform: translateY(22px);
+      transition: opacity 0.72s ease, transform 0.72s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <header class="site-header" role="banner">
+    <a class="site-logo" href="" aria-label="Hillscape Home">Hillscape</a>
+    <a class="back-btn" href="/">← All Stories</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Article hero">
+    <img
+      class="hero-img"
+      src="https://images.unsplash.com/photo-1660918738010-295b09857f93?w=1800&q=85&auto=format&fit=crop"
+      alt="Rolling green hills of the Nilgiris at golden hour, layers of blue ridges receding into mist, wildflowers in the foreground"
+    />
+    <div class="hero-gradient" aria-hidden="true"></div>
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">72 Hours &mdash; The Nilgiris &mdash; Tamil Nadu</p>
+      <h1 class="hero-title">
+        Blue Mountain
+        <span class="sub">A Nilgiri Odyssey</span>
+      </h1>
+      <p class="hero-deck">From fog-wrapped botanical gardens to the last toy train to Coonoor as dusk paints the Nilgiris amber — a definitive guide to the Queen of Hill Stations.</p>
+      <div class="hero-meta">
+        <span>By Hillscape Traveller</span>
+        <span class="sep">·</span>
+        <span><time datetime="2026-06-04">June 4, 2026</time></span>
+        <span class="sep">·</span>
+        <span id="read-time">9 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="article-layout">
+
+      <!-- TOC -->
+      <aside class="toc-sidebar" aria-label="Table of contents">
+        <nav class="toc-inner">
+          <p class="toc-label">72 Hours</p>
+          <ul class="toc-list" id="toc-list">
+            <li><a href="#arrival">Arriving at Altitude</a></li>
+            <li><a href="#day1-gardens">Day 1 — The Gardens</a></li>
+            <li><a href="#day1-lake">Ooty Lake</a></li>
+            <li><a href="#day2-train">Day 2 — The Toy Train</a></li>
+            <li><a href="#day2-coonoor">Coonoor & Sim's Park</a></li>
+            <li><a href="#day3-doddabetta">Day 3 — Doddabetta</a></li>
+            <li><a href="#day3-market">Charing Cross & Market</a></li>
+            <li><a href="#departure">The Last Morning</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Prose -->
+      <article class="prose" id="article-body">
+
+        <p class="lead-paragraph" id="arrival">
+          There is a moment, about thirty minutes before you reach Ooty by road, when the Nilgiris announce themselves with something close to ceremony. The switchbacks steepen. The temperature drops a perceptible five degrees. The eucalyptus gives way to stunted shola forest, and then — usually around a blind corner where the road straightens briefly — the whole plateau opens ahead, green and enormous and improbably cool in a country that, at this time of year, is otherwise engaged in the business of being very hot indeed. This is the Blue Mountain revealing itself. And it asks, quietly but firmly, that you proceed at a different pace.
+        </p>
+
+        <p class="reveal">Ooty — officially Udhagamandalam, practically impossible to call anything other than Ooty — sits at 2,240 metres in the Nilgiri district of Tamil Nadu and has been receiving visitors since the British East India Company's surveyors stumbled upon the plateau in 1819 and decided, with the decisive practicality of colonial administration, that it would make an excellent summer capital. The infrastructure they left behind — the botanical gardens, the racecourse, the stone churches, the Gothic-revival club — remains, wearing its age with varying degrees of grace. What was once a convenience of empire has become, for the rest of India, the definition of a hill station. Hundreds of them exist across the subcontinent. None of them have quite managed to dislodge the Queen.</p>
+
+        <div class="stat-strip reveal" aria-label="Ooty at a glance">
+          <div class="stat-item">
+            <span class="stat-num">2,240</span>
+            <span class="stat-label">Metres elevation</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">46</span>
+            <span class="stat-label">km toy train route</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num">1819</span>
+            <span class="stat-label">Year discovered</span>
+          </div>
+        </div>
+
+        <h2 class="section-heading reveal" id="day1-gardens">
+          Day One: <em>The Fog and the Garden</em>
+        </h2>
+
+        <div class="day-badge reveal" aria-label="Day one">Day 01 &mdash; Morning</div>
+
+        <p class="reveal">The Government Botanical Gardens occupy twenty-two hectares on the slopes below Doddabetta Peak, and the best thing that can happen to you there is fog. Thick, unhurried, early-morning fog that turns the Italian-garden section into a stage set, renders the fossil tree — a twenty-million-year-old trunk embedded in the hillside like a geological argument — even more implausible than it already is, and makes the lower terraces, with their rose beds and topiary, look as though they have been excerpted from a country house novel and deposited, improbably, at two thousand metres in South India.</p>
+
+        <p class="reveal">I arrived at eight, before the tour groups, and had the upper beds entirely to myself for forty minutes. The rhododendrons were still in partial bloom — a late flush, the gardener said, unusual for June — and the Toda tribal artefacts displayed near the top terrace were beaded with dew. The Toda are the Nilgiris' oldest inhabitants, their embroidered shawls and distinctive barrel-shaped huts as specific to this landscape as the shola grasslands themselves. In the gardens, their presence is acknowledged if not fully explained. For context, you need the Toda model village nearby, and more than a morning.</p>
+
+        <figure class="story-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1683863655647-b37baeb9fd99?w=900&q=80&auto=format&fit=crop"
+            alt="Terraced botanical garden at dawn, fog drifting through rose beds and topiary hedges, distant hills barely visible through mist"
+            loading="lazy"
+          />
+          <figcaption>The Government Botanical Gardens before the crowds — fog, fossil trees, and twenty-two hectares of carefully tended altitude.</figcaption>
+        </figure>
+
+        <div class="day-badge reveal" aria-label="Day one afternoon">Day 01 &mdash; Afternoon</div>
+
+        <p class="reveal" id="day1-lake">Ooty Lake is 2.5 kilometres of improbable beauty constructed in 1824 by John Sullivan, the Collector of Coimbatore who is also credited with building the first stone house on the plateau. Sullivan, a man of apparently inexhaustible civil engineering ambitions, dammed the Kamaraj Sagar stream, created the lake, and gave Ooty its second defining shape — its first being the roughly circular plateau itself. The lake today is ringed by eucalyptus and silver oak, its surface reflecting the surrounding hills in a long, wobbly panorama that shifts every time the wind moves.</p>
+
+        <p class="reveal">I hired a pedal boat for an hour with no destination in mind and spent most of it drifting in the middle of the lake watching the light change on the Doddabetta massif to the north. A family of coots navigated around me with the weary patience of commuters encountering a slow pedestrian. The boathouse serves tea in terracotta cups; I drank two standing on the jetty afterwards, watching the tourist boats come and go, listening to Tamil film songs drifting from somewhere I couldn't locate. It was, in the specific way that certain unhurried hours are, exactly the right use of time.</p>
+
+        <figure class="full-bleed reveal">
+          <img
+            src="https://images.unsplash.com/photo-1638886540342-240980f60d25?w=1400&q=80&auto=format&fit=crop"
+            alt="Still mountain lake at mid-morning, eucalyptus and silver oak reflected perfectly on the surface, hills beyond in blue haze"
+            loading="lazy"
+          />
+          <figcaption>Ooty Lake — 2.5 kilometres of constructed calm, and the hills that contain it.</figcaption>
+        </figure>
+
+        <h2 class="section-heading reveal" id="day2-train">
+          Day Two: <em>The Train That Refuses to Hurry</em>
+        </h2>
+
+        <div class="day-badge reveal" aria-label="Day two morning">Day 02 &mdash; Morning</div>
+
+        <p class="reveal">The Nilgiri Mountain Railway — a UNESCO World Heritage Site since 2005, metre-gauge, rack-and-pinion on the steeper sections, coal-fired on the lower stretches and diesel above Coonoor — departs Ooty station at eight forty-five for the 46-kilometre journey to Mettupalayam. I took it only as far as Coonoor, a 17-kilometre run that takes just under an hour and involves sixteen tunnels, a series of viaducts over eucalyptus-forested valleys, and a gradient that, at its steepest, climbs one metre for every twelve of forward progress.</p>
+
+        <p class="reveal">The toy train does not pretend to be efficient. It is a vehicle for paying attention. I sat by an open window in the first carriage and watched the Nilgiris assemble themselves in reverse — the town thinning into market gardens, the market gardens giving way to tea, the tea to dense shola as the train dropped altitude and curved through the Hulical ravine section, where the valley falls away on one side with an abruptness that makes the window feel insufficient as a barrier between you and a very long drop. The whistle echoes. The brakes smell of hot iron. At Coonoor, people on the platform clap as the train arrives, which felt exactly appropriate.</p>
+
+        <div class="pull-quote reveal">
+          <p>The toy train does not pretend to be efficient. It is a vehicle for paying attention — and the Nilgiris, seen from a slow window, reward exactly that.</p>
+        </div>
+
+        <div class="itinerary-card reveal" aria-label="Toy train practical information">
+          <h3>Toy Train — Know Before You Go</h3>
+          <ol>
+            <li><strong>Book early:</strong> Tickets sell out days ahead, especially first class. Book via IRCTC or at Ooty station the evening prior.</li>
+            <li><strong>Best seat:</strong> Right-hand side facing Coonoor for valley views; left-hand for forested ridge.</li>
+            <li><strong>Take it slow:</strong> The 8:45 AM departure reaches Coonoor at ~9:50 AM, giving a full day before the return.</li>
+            <li><strong>Return:</strong> Buses and shared jeeps run frequently between Coonoor and Ooty for the journey back.</li>
+          </ol>
+        </div>
+
+        <div class="day-badge reveal" aria-label="Day two afternoon">Day 02 &mdash; Afternoon</div>
+
+        <p class="reveal" id="day2-coonoor">Coonoor is Ooty's quieter sibling — smaller, less visited, cooler in temperament if not always in temperature. Sim's Park, a twelve-hectare botanical garden established in 1874 on a ravine above the town, is among the finest hill gardens in South India and considerably less crowded than its counterpart in Ooty. The ravine setting means the garden descends in a series of terraced drops, each level offering a different microclimate — the top beds open and windswept, the lower sections sheltered and subtropical, smelling of wet leaf litter and the particular sweetness of magnolia.</p>
+
+        <p class="reveal">I spent two hours there, mainly sitting on a bench near the lower lily pond watching dragonflies manage their hover-and-dart routines over the water. There is a species of silence specific to well-maintained gardens at altitude — a silence composed partly of birdsong and the faint wind and the sound of your own breathing slowing down — and Sim's Park has it in abundance. Lunch afterwards at a small restaurant on the main road: mutton chukka and parotta, eaten at a plastic table with absolute conviction that this was correct.</p>
+
+        <!-- <div class="image-duo reveal">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80&auto=format&fit=crop"
+              alt="Stone railway viaduct in the Nilgiris, toy train crossing through forested ravine, eucalyptus slopes beyond"
+              loading="lazy"
+            />
+            <figcaption>The NMR on the Hulical ravine section — one metre up for every twelve forward.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80&auto=format&fit=crop"
+              alt="Sim's Park Coonoor terraced gardens descending a ravine, lily pond in foreground, blue sky with cloud"
+              loading="lazy"
+            />
+            <figcaption>Sim's Park, Coonoor — the quieter garden, the better afternoon.</figcaption>
+          </figure>
+        </div> -->
+
+        <h2 class="section-heading reveal" id="day3-doddabetta">
+          Day Three: <em>The Peak and the Market</em>
+        </h2>
+
+        <div class="day-badge reveal" aria-label="Day three morning">Day 03 &mdash; Morning</div>
+
+        <p class="reveal">At 2,637 metres, Doddabetta is the highest point in the Nilgiris and the second-highest in South India, separated from the Anaimalai range by the Coimbatore Gap. The road to the summit is paved, which is simultaneously convenient and slightly unfortunate — the summit area is equipped with a telescope house and a tea stall and a modest volume of visitors, none of which diminish the view but none of which add to it either. I went on my third morning, at six-fifteen, before the stalls opened.</p>
+
+        <p class="reveal">In that narrow window, the mountain was available in a way it isn't later. Cloud was moving below the summit, filling the valleys to the east, and the Western Ghats unspooled to the south in a sequence of ridgelines that grew progressively bluer and more remote until they were indistinguishable from sky. The Mudumalai forest reserve was visible far below to the north — a dark green mass that holds tigers, elephants, leopards, and the Moyar river, all invisible from this distance but present in the knowledge of them. I stayed for an hour drinking a flask of tea I had brought, and did not take many photographs. Some views are better held than captured.</p>
+
+        <figure class="story-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1711553188400-13eeb32a1a51?w=900&q=80&auto=format&fit=crop"
+            alt="View from Doddabetta Peak at dawn, cloud filling the valleys below, successive blue ridges of the Western Ghats receding to the horizon"
+            loading="lazy"
+          />
+          <figcaption>Doddabetta at six in the morning — 2,637 metres, and cloud filling every valley below.</figcaption>
+        </figure>
+
+        <div class="day-badge reveal" aria-label="Day three afternoon">Day 03 &mdash; Afternoon</div>
+
+        <p class="reveal" id="day3-market">The commercial heart of Ooty is Charing Cross, a junction whose name is the most audacious act of colonial toponymy in the Nilgiris — a busy Tamil Nadu hill town intersection named after a London square it resembles in no particular way. From Charing Cross, the streets descend in two directions: toward the racecourse and the older colonial quarter, and toward the municipal market, a covered bazaar of considerable sensory density where the Nilgiri agricultural economy presents itself in direct and unavoidable terms.</p>
+
+        <p class="reveal">The Municipal Market sells everything grown at altitude: carrots the size of small clubs, cauliflowers of improbable whiteness, the particular Nilgiri variety of garlic with its papery purple skin, fresh eucalyptus honey, dried herbs, homemade varkey biscuits, and the Ooty specialty that functions as an edible mascot — the hand-rolled homemade chocolate that every stall sells in slightly different formulations. I bought five hundred grams of a dark variety with cardamom, ate a third of it before reaching my guesthouse, and felt entirely justified. Altitude accelerates appetite. The Nilgiris themselves seem to encourage certain indulgences.</p>
+
+        <h2 class="section-heading reveal" id="departure">
+          The Last Morning: <em>The Train Home, Going Down</em>
+        </h2>
+
+        <p class="reveal">My last morning in Ooty followed the pattern that Ooty enforces on everyone who stays long enough: I woke early without an alarm, dressed in more layers than seemed reasonable for June, and walked to the lake before breakfast. The fog was in — properly in, the close, white, intimate kind that reduces visibility to thirty metres and turns every other person on the path into a grey suggestion of a human — and the lake was a sound rather than a sight: the slap of water on the jetty, the creak of a moored boat, a coot somewhere in the murk.</p>
+
+        <p class="reveal">The toy train back — or rather, the bus back, since I was heading all the way to Coimbatore and the train serves only the mountain — wound down through the switchbacks in reverse, the temperature rising at each level, the vegetation thinning and drying and yellowing as the plains reasserted themselves. By the time we reached the foothills the windows had steamed over from the outside, which is how you know the altitude is truly gone: when the world becomes warm enough to condense on glass.</p>
+
+        <div class="pull-quote reveal">
+          <p>The Queen of Hill Stations does not reveal herself on the first day, or the second. She is patient. She has been here since before the road, and she will be here after the last bus. She asks only that you arrive with enough time left to change your pace.</p>
+        </div>
+
+        <p class="reveal">Seventy-two hours in Ooty is not quite enough. It is, however, enough to understand why the British built an empire's summer here — why people left Madras and Bombay in April and stayed until September — and why, today, the trains still run full on weekends in every season. There is something about the Nilgiris that resists diminishment. The Queen of Hill Stations keeps her title not through nostalgia but through an ongoing, daily performance of actual beauty. She earns it, every morning, in fog.</p>
+
+        <div class="article-footer reveal">
+          <!-- <div class="tags" aria-label="Article tags">
+            <a class="tag" href="/tag/ooty">Ooty</a>
+            <a class="tag" href="/tag/nilgiris">Nilgiris</a>
+            <a class="tag" href="/tag/toy-train">Toy Train</a>
+            <a class="tag" href="/tag/tamil-nadu">Tamil Nadu</a>
+            <a class="tag" href="/tag/72-hours">72-Hour Guides</a>
+            <a class="tag" href="/tag/hill-stations">Hill Stations</a>
+            <a class="tag" href="/tag/heritage">Heritage</a>
+          </div> -->
+          <a class="back-btn" href="index.html" style="display:inline-block;margin-top:8px;">← Back to Hillscape</a>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- Related Stories -->
+    <section class="related-section" aria-label="Related stories">
+      <div class="related-inner">
+        <p class="section-label">Continue Exploring</p>
+        <div class="related-grid">
+
+          <a class="related-card" href="/stories/kodaikanal-story">
+            <div class="related-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1692792284356-f80113facd09?w=600&q=75&auto=format&fit=crop"
+                alt="Pine forest in early morning mist, Kodaikanal"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">Palani Hills</p>
+            <h3 class="related-card-title">Into the Silver Mist of Kodaikanal</h3>
+            <p class="related-card-excerpt">Pine mist, a star-shaped lake, chocolate still made by hand — Kodaikanal at its slow, unhurried best.</p>
+          </a>
+
+          <a class="related-card" href="/stories/wayanad-story">
+            <div class="related-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1619020905969-ba8d47f8c7cf?w=600&q=75&auto=format&fit=crop"
+                alt="Rolling tea estate in Kerala highlands, green rows curving over hillside at dawn"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">Tea Country</p>
+            <h3 class="related-card-title">Wayanad's Wild Soul: Forest, Tribe & Tea</h3>
+            <p class="related-card-excerpt">A journey through Kerala's most ecologically rich district, where ancient Adivasi culture meets pristine wilderness.</p>
+          </a>
+
+          <a class="related-card" href="/stories/coorg-story">
+            <div class="related-card-img">
+              <img
+                src="https://images.unsplash.com/photo-1710612198146-77512950a4b7?w=600&q=75&auto=format&fit=crop"
+                alt="Forest path in the Western Ghats during monsoon"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">Monsoon Escapes</p>
+            <h3 class="related-card-title">Coorg in the Rain: A Guide to Arriving Wet</h3>
+            <p class="related-card-excerpt">The Scotland of India at its most dramatic — why Coorg's monsoon season is its best-kept secret.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <a href="https://www.hillscape.netlify.app">Hillscape</a>
+    <p>&copy; 2026 Hillscape Magazine. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Progress bar
+    const bar = document.getElementById('progress-bar');
+    function updateProgress() {
+      const art = document.getElementById('article-body');
+      const total = art.offsetHeight - window.innerHeight;
+      const pct = Math.min(100, Math.max(0, -art.getBoundingClientRect().top / total * 100));
+      bar.style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', Math.round(pct));
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // Reading time
+    const wc = (document.getElementById('article-body').innerText || '').split(/\s+/).filter(Boolean).length;
+    document.getElementById('read-time').textContent = Math.ceil(wc / 220) + ' min read';
+
+    // Scroll reveal
+    const revealObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+    // Active TOC
+    const ids = ['arrival','day1-gardens','day1-lake','day2-train','day2-coonoor','day3-doddabetta','day3-market','departure'];
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const tocObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const lnk = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+          if (lnk) lnk.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-28% 0px -62% 0px' });
+    ids.map(id => document.getElementById(id)).filter(Boolean).forEach(el => tocObs.observe(el));
+  </script>
+
+</body>
+</html>

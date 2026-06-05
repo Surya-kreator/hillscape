@@ -1,0 +1,2 @@
+1:
+Create a complete Hillscape article using my existing HTML structure. Preserve all scripts, schema, meta tags, navigation, footer, styling, and SEO framework. Only update title, description, canonical URL, schema values, content, FAQs, and internal links.

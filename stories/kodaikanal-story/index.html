@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seven Thousand Feet Above the World: Kodaikanal Unfolded | Hillscape</title>
+  <meta name="description" content="High in the Palani Hills, Kodaikanal keeps its own clock. A luxury travel essay on pine-misted mornings, star-lake walks, chocolate lanes, and the art of arriving slowly at 7,000 feet." />
+  <link rel="canonical" href="https://www.hillscape.netlify.app/stories/kodaikanal-story" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Seven Thousand Feet Above the World: Kodaikanal Unfolded" />
+  <meta property="og:description" content="High in the Palani Hills, Kodaikanal keeps its own clock — pine mist, a star-shaped lake, silent forests, and chocolate still made by hand." />
+  <meta property="og:url" content="https://www.hillscape.netlify.app/stories/kodaikanal-story" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=80" />
+  <meta property="og:site_name" content="Hillscape" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Seven Thousand Feet Above the World: Kodaikanal Unfolded" />
+  <meta name="twitter:description" content="High in the Palani Hills, Kodaikanal keeps its own clock — pine mist, a star-shaped lake, silent forests." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=80" />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Seven Thousand Feet Above the World: Kodaikanal Unfolded",
+    "description": "High in the Palani Hills, Kodaikanal keeps its own clock. A luxury travel essay on pine-misted mornings, the star-lake, silent forests, and chocolate still made by hand.",
+    "image": "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=1200&q=80",
+    "author": { "@type": "Person", "name": "Meera Raghavan" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Hillscape",
+      "logo": { "@type": "ImageObject", "url": "https://www.hillscape.netlify.app/logo.png" }
+    },
+    "datePublished": "2026-06-03",
+    "dateModified": "2026-06-03",
+    "mainEntityOfPage": "https://www.hillscape.netlify.app/stories/kodaikanal-story",
+    "articleSection": "Travel",
+    "keywords": ["Kodaikanal", "Tamil Nadu", "hill station", "Palani Hills", "India travel", "luxury travel", "slow travel", "Western Ghats"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --void: #0d1117;
+      --deep: #141c1f;
+      --panel: #1a2428;
+      --surface: #1f2d32;
+      --border: rgba(255,255,255,0.07);
+      --pine: #2d4a3e;
+      --mist: #8ca8a0;
+      --silver: #c4cfc9;
+      --ivory: #f0ede6;
+      --ivory-dim: rgba(240,237,230,0.65);
+      --ivory-faint: rgba(240,237,230,0.35);
+      --teal: #5b9e8f;
+      --teal-light: #7dbfb2;
+      --amber: #c8973a;
+      --amber-light: #e0b560;
+      --serif: 'DM Serif Display', Georgia, serif;
+      --body-serif: 'Libre Baskerville', Georgia, serif;
+      --sans: 'DM Sans', system-ui, sans-serif;
+      --max-prose: 720px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--void);
+      color: var(--ivory);
+      font-family: var(--body-serif);
+      font-weight: 400;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+
+    /* ── Grain overlay ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      opacity: 0.028;
+      pointer-events: none;
+      z-index: 9999;
+    }
+
+    /* ── Progress Bar ── */
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 2px;
+      width: 0%;
+      background: linear-gradient(90deg, var(--teal), var(--teal-light), var(--amber-light));
+      z-index: 1001;
+      transition: width 0.12s linear;
+      box-shadow: 0 0 10px rgba(91,158,143,0.6);
+    }
+
+    /* ── Site Header ── */
+    .site-header {
+      position: fixed;
+      top: 2px; left: 0; right: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 32px;
+      background: rgba(13,17,23,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .site-logo {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      text-decoration: none;
+    }
+
+    .back-btn {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      font-weight: 400;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--mist);
+      text-decoration: none;
+      border: 1px solid rgba(139,168,160,0.3);
+      padding: 7px 18px;
+      transition: all 0.25s;
+    }
+    .back-btn:hover {
+      border-color: var(--teal);
+      color: var(--teal-light);
+      background: rgba(91,158,143,0.08);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      height: 100svh;
+      min-height: 600px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+      transform: scale(1.06);
+      animation: heroBreath 16s ease-out forwards;
+      filter: brightness(0.72) saturate(0.85);
+    }
+
+    @keyframes heroBreath {
+      to { transform: scale(1); }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to top, rgba(13,17,23,0.95) 0%, rgba(13,17,23,0.4) 55%, rgba(13,17,23,0.1) 100%),
+        linear-gradient(to right, rgba(13,17,23,0.35) 0%, transparent 60%);
+    }
+
+    /* Mist vignette top */
+    .hero-mist {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 220px;
+      background: linear-gradient(to bottom, rgba(13,17,23,0.55) 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 900px;
+      padding: 0 28px 72px;
+      animation: fadeUp 1.4s 0.4s both;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-elevation {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .hero-elevation::before {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--teal);
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.6rem, 7vw, 5.2rem);
+      font-weight: 400;
+      line-height: 1.05;
+      color: var(--ivory);
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+    }
+
+    .hero-title .italic-line {
+      display: block;
+      font-style: italic;
+      color: var(--teal-light);
+      font-size: 0.82em;
+    }
+
+    .hero-subtitle {
+      font-family: var(--body-serif);
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--ivory-dim);
+      margin-bottom: 28px;
+      max-width: 540px;
+      line-height: 1.6;
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .hero-byline, .hero-date, .hero-read-time {
+      font-family: var(--sans);
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--ivory-faint);
+      letter-spacing: 0.04em;
+    }
+
+    .hero-meta .sep { color: rgba(240,237,230,0.2); }
+
+    /* ── Layout ── */
+    .article-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 72px 24px;
+    }
+
+    @media (min-width: 1060px) {
+      .article-layout {
+        grid-template-columns: 200px 1fr;
+        gap: 0 64px;
+        padding: 88px 44px;
+      }
+    }
+
+    /* ── TOC ── */
+    .toc-sidebar { display: none; }
+
+    @media (min-width: 1060px) {
+      .toc-sidebar { display: block; }
+
+      .toc-inner {
+        position: sticky;
+        top: 96px;
+      }
+    }
+
+    .toc-label {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 20px;
+    }
+
+    .toc-list {
+      list-style: none;
+      border-left: 1px solid rgba(91,158,143,0.2);
+      padding-left: 16px;
+    }
+
+    .toc-list li { margin-bottom: 14px; }
+
+    .toc-list a {
+      font-family: var(--sans);
+      font-size: 0.76rem;
+      font-weight: 300;
+      color: var(--mist);
+      text-decoration: none;
+      line-height: 1.4;
+      transition: color 0.2s;
+      display: block;
+      opacity: 0.65;
+    }
+
+    .toc-list a:hover,
+    .toc-list a.active {
+      color: var(--teal-light);
+      opacity: 1;
+    }
+
+    /* ── Prose ── */
+    .prose { max-width: var(--max-prose); }
+
+    .lead-paragraph {
+      font-family: var(--body-serif);
+      font-size: clamp(1.15rem, 2.2vw, 1.4rem);
+      font-weight: 400;
+      line-height: 1.75;
+      color: var(--ivory);
+      margin-bottom: 52px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .lead-paragraph::first-letter {
+      float: left;
+      font-family: var(--serif);
+      font-size: 5.2em;
+      line-height: 0.78;
+      margin: 0.08em 0.1em 0 0;
+      color: var(--teal);
+    }
+
+    h2.section-heading {
+      font-family: var(--serif);
+      font-size: clamp(1.55rem, 3.2vw, 2.2rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--ivory);
+      margin: 60px 0 20px;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .prose p {
+      font-size: clamp(1rem, 1.7vw, 1.08rem);
+      color: var(--silver);
+      margin-bottom: 28px;
+      line-height: 1.9;
+    }
+
+    .prose a {
+      color: var(--teal-light);
+      text-decoration: underline;
+      text-decoration-color: rgba(91,158,143,0.3);
+      text-underline-offset: 4px;
+      transition: text-decoration-color 0.2s;
+    }
+    .prose a:hover { text-decoration-color: var(--teal-light); }
+
+    /* Pull quote */
+    .pull-quote {
+      margin: 56px 0;
+      padding: 40px 44px;
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--teal);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pull-quote::after {
+      content: '';
+      position: absolute;
+      top: 0; right: 0;
+      width: 160px; height: 160px;
+      background: radial-gradient(circle at top right, rgba(91,158,143,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .pull-quote::before {
+      content: '\201C';
+      position: absolute;
+      top: 4px; left: 28px;
+      font-family: var(--serif);
+      font-size: 6rem;
+      color: var(--teal);
+      line-height: 1;
+      opacity: 0.18;
+    }
+
+    .pull-quote p {
+      font-family: var(--serif);
+      font-size: clamp(1.2rem, 2.4vw, 1.55rem) !important;
+      font-style: italic;
+      color: var(--ivory) !important;
+      margin: 0 !important;
+      line-height: 1.5;
+    }
+
+    /* ── Story Images ── */
+    .story-image {
+      margin: 52px -8px;
+    }
+
+    @media (min-width: 600px) { .story-image { margin: 56px 0; } }
+
+    .story-image img {
+      width: 100%;
+      height: clamp(220px, 44vw, 460px);
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.9) saturate(0.9);
+      transition: filter 0.5s;
+    }
+
+    .story-image:hover img { filter: brightness(0.95) saturate(1); }
+
+    .story-image figcaption {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--mist);
+      letter-spacing: 0.04em;
+      margin-top: 11px;
+      opacity: 0.6;
+    }
+
+    /* Full bleed */
+    .full-bleed {
+      margin: 70px -24px;
+    }
+
+    @media (min-width: 1060px) { .full-bleed { margin: 80px -44px; } }
+
+    .full-bleed img {
+      width: 100%;
+      height: clamp(300px, 50vw, 600px);
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.88) saturate(0.88);
+    }
+
+    .full-bleed figcaption {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--mist);
+      letter-spacing: 0.04em;
+      margin-top: 11px;
+      padding: 0 24px;
+      opacity: 0.58;
+    }
+
+    /* Image duo */
+    .image-duo {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin: 52px 0;
+    }
+
+    .image-duo img {
+      width: 100%;
+      height: clamp(150px, 26vw, 300px);
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.85) saturate(0.85);
+    }
+
+    .image-duo figcaption {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      color: var(--mist);
+      margin-top: 8px;
+      opacity: 0.55;
+      line-height: 1.4;
+    }
+
+    /* Elevation marker */
+    .elevation-marker {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 48px 0 0;
+      padding: 20px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .elevation-number {
+      font-family: var(--serif);
+      font-size: 3.2rem;
+      color: var(--teal);
+      line-height: 1;
+      font-style: italic;
+    }
+
+    .elevation-text {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      font-weight: 300;
+      color: var(--mist);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      line-height: 1.5;
+    }
+
+    /* ── Article Footer ── */
+    .article-footer {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .tag {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      border: 1px solid rgba(91,158,143,0.25);
+      padding: 6px 14px;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .tag:hover {
+      background: var(--teal);
+      color: var(--void);
+      border-color: var(--teal);
+    }
+
+    /* ── Related Stories ── */
+    .related-section {
+      background: var(--deep);
+      padding: 80px 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (min-width: 768px) { .related-section { padding: 88px 44px; } }
+
+    .related-inner { max-width: 1180px; margin: 0 auto; }
+
+    .section-label {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    @media (min-width: 600px) { .related-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (min-width: 900px) { .related-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    .related-card { text-decoration: none; display: block; }
+
+    .related-card-img-wrap {
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+
+    .related-card img {
+      width: 100%;
+      height: 196px;
+      object-fit: cover;
+      display: block;
+      filter: brightness(0.82) saturate(0.8);
+      transition: transform 0.55s ease, filter 0.4s;
+    }
+
+    .related-card:hover img {
+      transform: scale(1.05);
+      filter: brightness(0.9) saturate(0.95);
+    }
+
+    .related-card-cat {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 8px;
+    }
+
+    .related-card-title {
+      font-family: var(--serif);
+      font-size: 1.18rem;
+      color: var(--ivory);
+      line-height: 1.35;
+      margin-bottom: 10px;
+      transition: color 0.2s;
+    }
+
+    .related-card:hover .related-card-title { color: var(--teal-light); }
+
+    .related-card-excerpt {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: var(--mist);
+      line-height: 1.65;
+      opacity: 0.72;
+    }
+
+    /* ── Site Footer ── */
+    .site-footer {
+      background: var(--void);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 40px 24px;
+    }
+
+    .site-footer a {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal-light);
+      text-decoration: none;
+    }
+
+    .site-footer p {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 300;
+      color: var(--ivory-faint);
+      letter-spacing: 0.04em;
+      margin-top: 10px;
+    }
+
+    /* ── Scroll reveals ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <header class="site-header" role="banner">
+    <a class="site-logo" href="" aria-label="Hillscape Home">Hillscape</a>
+    <a class="back-btn" href="/">← Back to Stories</a>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" aria-label="Article hero">
+    <img
+      class="hero-img"
+      src="https://images.unsplash.com/photo-1692792284356-f80113facd09?auto=format&fit=crop&w=1600&q=80"
+      alt="Pine forest in early morning mist at high altitude, shafts of diffuse light filtering through tall trees"
+    />
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-mist" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-elevation">Palani Hills &mdash; Tamil Nadu &mdash; 2,133 m</p>
+      <h1 class="hero-title">
+        Into the
+        <span class="italic-line">Silver Mist</span>
+        of Kodaikanal
+      </h1>
+      <p class="hero-subtitle">Kodaikanal doesn't simply welcome you — it asks you to slow down, to wander its forested paths, and to find a gentler rhythm hidden high above the plains.</p>
+      <div class="hero-meta">
+        <span class="hero-byline">By Hillscape Traveller</span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="hero-date"><time datetime="2026-06-03">June 3, 2026</time></span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span class="hero-read-time" id="read-time">9 min read</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="article-layout">
+
+      <!-- TOC -->
+      <aside class="toc-sidebar" aria-label="Table of contents">
+        <nav class="toc-inner">
+          <p class="toc-label">In this story</p>
+          <ul class="toc-list" id="toc-list">
+            <li><a href="#arrival">The Road Up</a></li>
+            <li><a href="#lake">Kodai Lake at Dawn</a></li>
+            <li><a href="#pine-forest">Into the Pine Forest</a></li>
+            <li><a href="#coakers">Coaker's Walk</a></li>
+            <li><a href="#chocolate">The Chocolate Lane</a></li>
+            <li><a href="#pillar-rocks">Pillar Rocks</a></li>
+            <li><a href="#departure">On Leaving Slowly</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Article Body -->
+      <article class="prose" id="article-body">
+
+        <p class="lead-paragraph" id="arrival">
+          There's a particular quality of morning light at 7,000 feet — the way it drifts through pine-scented mist, softening every ridge and valley into shades of silver and blue. Kodaikanal doesn't simply welcome you; it invites you to slow down, to wander its forested paths and quiet viewpoints, and to rediscover a gentler rhythm hidden high above the plains. The road up from Dindigul takes three hours of switchbacks through a landscape that transforms in real time: dry scrub giving way to lantana, lantana to eucalyptus, eucalyptus to the first dark stands of pine that signal you have, at last, traded the heat of the Tamil Nadu lowlands for something altogether cooler and less certain.
+        </p>
+
+        <p class="reveal">I arrived on a Tuesday in late May, when most of India is surrendering to summer and Kodaikanal is doing the opposite — settling into its cool season with a self-possession that borders on indifference to the rest of the subcontinent's distress. My driver, a local man named Selvam who had been navigating these hairpin bends since he was a teenager riding pillion, said almost nothing for the entire ascent. When we crested the last ridge and the town appeared — slate rooftops emerging from the cloud like a village dreamed into existence — he simply said: "Cold now." It was both a weather report and a kind of philosophy.</p>
+
+        <div class="elevation-marker reveal" aria-hidden="true">
+          <div class="elevation-number">2,133</div>
+          <div class="elevation-text">metres above sea level<br>Kodaikanal, Palani Hills<br>Western Ghats, Tamil Nadu</div>
+        </div>
+
+        <h2 class="section-heading reveal" id="lake">Kodai Lake at Dawn</h2>
+
+        <p class="reveal">The defining shape of Kodaikanal is aquatic. <a href="/destinations/kodaikanal/kodai-lake">Kodai Lake</a> — a man-made reservoir constructed in 1863 by a British collector named Sir Vere Henry Levinge, who dammed a stream on the plateau to create a five-kilometre star-shaped expanse of still water — sits at the centre of town and gives everything around it a reflective quality, literally and otherwise. In the early morning, when most guesthouses are still quiet and the pedal boats are still chained to their jetty, the lake is something close to miraculous.</p>
+
+        <p class="reveal">I walked the perimeter path at six-fifteen, wearing every layer I had brought. The mist was low, settling directly onto the water's surface, and the pine trees on the far bank were barely visible — dark suggestions of verticality in a grey world. An elderly couple walked ahead of me in matching windcheaters, their conversation audible but indistinct, absorbed by the fog. A lone cormorant stood on a half-submerged branch, motionless, as though commissioned by the scene as punctuation.</p>
+
+        <figure class="story-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1608729974503-b9e254f8356c?w=900&q=80&auto=format&fit=crop"
+            alt="Mirror-calm mountain lake at dawn surrounded by pine forest, surface partially veiled in mist"
+            loading="lazy"
+          />
+          <figcaption>Kodai Lake at first light — five kilometres of still water at the centre of everything.</figcaption>
+        </figure>
+
+        <p class="reveal">The full circuit — 5 km, flat, unhurried — takes about an hour at a pace designed for looking rather than arriving. I did it twice on different mornings and found them entirely unlike each other: the first shrouded and intimate, the second bright with early sun that turned the lake's surface from pewter to hammered copper. Kodaikanal is generous with weather variety. It changes its mind every few hours, and the appropriate response is to change your plans accordingly.</p>
+
+        <h2 class="section-heading reveal" id="pine-forest">Into the Pine Forest</h2>
+
+        <p class="reveal">Beyond the lake's eastern shore, the <a href="/destinations/kodaikanal/pine-forest">Pine Forest of Kodaikanal</a> begins without ceremony — the path simply narrows, the town sounds drop away, and the trees close in around you until all that remains is the smell of resin, the soft percussion of pine cones falling, and the occasional explosion of a Nilgiri laughingthrush somewhere in the canopy above. The forest is crisscrossed by informal trails worn by decades of walkers and, in the steeper sections, the hoofprints of the horses that still carry less energetic visitors.</p>
+
+        <p class="reveal">I spent an afternoon in there with no plan beyond not getting seriously lost, guided loosely by a hand-drawn map given to me by my guesthouse owner — a Tamilian man named Suresh who had lived his entire life at altitude and possessed the quiet certainty of someone who has never needed to hurry. The map had three landmarks: a large fallen eucalyptus, a small shrine to Murugan draped in orange marigolds, and "the view." The view, when I found it after forty minutes of mild confusion, was a gap in the trees that revealed the entire southern valley spread below — forty kilometres of blue distance and, on the far horizon, the faint gleam of the plains I had left behind.</p>
+
+        <div class="pull-quote reveal">
+          <p>Standing at that gap in the trees, the plains visible far below, I understood why people come to Kodaikanal and forget to leave.</p>
+        </div>
+
+        <figure class="full-bleed reveal">
+          <img
+            src="https://images.unsplash.com/photo-1632729566882-82c178d1c034?w=1600&q=80&auto=format&fit=crop"
+            alt="Dense pine and eucalyptus forest on a hillside, shafts of afternoon light penetrating the canopy, forest floor soft with fallen needles"
+            loading="lazy"
+          />
+          <figcaption>The pine forest above the lake — resin, silence, and the occasional laughingthrush.</figcaption>
+        </figure>
+
+        <h2 class="section-heading reveal" id="coakers">Coaker's Walk</h2>
+
+        <p class="reveal">If the lake represents Kodaikanal at rest, <a href="/destinations/kodaikanal/coakers-walk">Coaker's Walk</a> is the hill station at its most theatrical. Built in 1872 by Lieutenant Coaker of the Madras Infantry, it is a kilometre-long paved path that runs along the sheer southern edge of the plateau, offering unobstructed views of the valleys and plains below — a drop of nearly two thousand metres achieved so gradually by the path's gentle gradient that the exposure only registers when you stop and look properly over the low stone parapet.</p>
+
+        <p class="reveal">On the morning I walked it, a column of cloud was climbing the escarpment from the south, driven by the pre-monsoon southwesterly, and the valley was filling below me like a bowl of milk. Within twenty minutes of my arrival, the view had been entirely replaced by white. Some tourists expressed disappointment. I found it more interesting: the way a landscape can be present and then absent, the way Kodaikanal withholds as naturally as it reveals. There is a small telescope mounted at the far end of Coaker's Walk, installed for clear days when Madurai is reportedly visible on the plains. I did not need it. What was in front of me was sufficient.</p>
+
+        <div class="image-duo reveal">
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1695379682148-14a53f9d3295?w=600&q=80&auto=format&fit=crop"
+              alt="Narrow walking path along a cliff edge, stone parapet, valley far below filling with morning cloud"
+              loading="lazy"
+            />
+            <figcaption>Coaker's Walk — a kilometre above the clouds.</figcaption>
+          </figure>
+          <figure>
+            <img
+              src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80&auto=format&fit=crop"
+              alt="Cloud rolling up a valley escarpment viewed from above, forested ridges disappearing into mist"
+              loading="lazy"
+            />
+            <figcaption>The pre-monsoon southwesterly, arriving on schedule.</figcaption>
+          </figure>
+        </div>
+
+        <h2 class="section-heading reveal" id="chocolate">The Chocolate Lane</h2>
+
+        <p class="reveal">Kodaikanal's most unexpected sensory pleasure is olfactory. Walk along <a href="/destinations/kodaikanal/chocolate-lane">Club Road</a> — known locally as Chocolate Lane for the twenty-odd small confectionery shops that operate there — on any afternoon and the air becomes genuinely fragrant with cocoa and cardamom and, in some of the older establishments, the slightly burned-sugar smell of handmade fudge cooling on granite slabs. The tradition dates to the mid-twentieth century, introduced by homesick hill residents and missionaries who wanted something sweet and found that the cool climate suited chocolate-making in ways the lowlands never could.</p>
+
+        <p class="reveal">The best of these shops — a narrow establishment called <a href="/destinations/kodaikanal/naturals-chocolate">Naturals</a>, run by a third-generation chocolatier whose grandmother began the enterprise in 1961 — produces a cardamom-and-black-pepper dark chocolate bar that I ate three of and brought six more home. It is neither artisanal nor precious about itself. It is simply, unmistakably, excellent. The owner, a compact man named Rajan who wears a flour-dusted apron regardless of the hour, offered me a stool and a small cup of bitter hot chocolate while he wrapped my order. We talked about altitude and chocolate chemistry — the way the lower atmospheric pressure changes melting points and tempering times. He has been adapting to it his whole career. "Down in Chennai," he said, "my recipes don't work. Everything is wrong."</p>
+
+        <figure class="story-image reveal">
+          <img
+            src="https://images.unsplash.com/photo-1511381939415-e44015466834?w=900&q=80&auto=format&fit=crop"
+            alt="Handmade dark chocolate bars and truffles dusted with cocoa powder on parchment, a small hill town shop in the background"
+            loading="lazy"
+          />
+          <figcaption>Chocolate Lane — where altitude changes the chemistry and third-generation recipes still hold.</figcaption>
+        </figure>
+
+        <h2 class="section-heading reveal" id="pillar-rocks">Pillar Rocks and the Edge of Everything</h2>
+
+        <p class="reveal">Eight kilometres from the town centre, along a road that skirts the southern plateau edge through dense shola forest, <a href="/destinations/kodaikanal/pillar-rocks">Pillar Rocks</a> stands as Kodaikanal's most abrupt geological statement. Three columns of granite — the tallest reaching 122 metres — rise from the valley below with the improbable verticality of something architected rather than eroded, as though the earth decided at this particular point to make an argument for the vertical. The viewpoint is equipped with a barrier and, frequently, a crowd, but I went at four in the afternoon on a weekday and found it nearly empty.</p>
+
+        <p class="reveal">The light at that hour was coming from the west, turning the granite from grey to amber to something approaching rose. A family of Nilgiri langurs moved along the forest edge on the far side, unbothered by the human activity at the viewpoint, their silver-black shapes against the reddening rock momentarily absurd and then, just as quickly, perfectly composed. I stayed for an hour and drove back in the dark, the road winding through stands of eucalyptus that caught the headlights like a tunnel made of silver.</p>
+
+        <h2 class="section-heading reveal" id="departure">On Leaving Slowly</h2>
+
+        <p class="reveal">My last morning in Kodaikanal followed the pattern the place had established from the beginning: cool, unhurried, indifferent to the schedule I had written in my notebook. I woke at five-thirty to the sound of rain on the tin roof of my guesthouse — a light, persistent drizzle that turned the pine needles outside my window into a string of water beads — and lay still for an extra half hour listening to it, which is not something I do at sea level.</p>
+
+        <p class="reveal">Suresh made breakfast: idli with a tomato chutney that was hotter than the altitude suggested it should be, and the kind of filter coffee that tastes as though it contains altitude itself — dense, dark, bracing. I ate it on the small veranda watching the mist move through the garden, the way it erased and restored the rose bushes in five-second intervals, the way the whole visible world seemed to be in a gentle negotiation between presence and absence.</p>
+
+        <div class="pull-quote reveal">
+          <p>Kodaikanal gives you back the part of yourself that knows how to simply be somewhere — without optimising it, without documenting it for later. Just being in a place, at altitude, while the mist does what mist does.</p>
+        </div>
+
+        <p class="reveal">What Kodaikanal offers is difficult to package into a list of viewpoints and eateries and trails, though all of these are real and worth your time. What it offers at its core is something rarer: a place that has not decided to be anything other than what it is. No grand rebranding, no overbuilt infrastructure chasing a different demographic. Just a hill town at 7,000 feet, keeping its own clock, smelling of pine and chocolate and wet earth, the plains visible on a clear day and swallowed by cloud on every other.</p>
+
+        <p class="reveal">Selvam picked me up at nine. The road down was the same road in reverse — pine to eucalyptus to lantana to the first blast of lowland heat at the valley floor — and with each hundred metres of descent I felt the altitude leaving me like something being gently removed. By the time we reached Dindigul, the temperature had crossed thirty degrees. I was already thinking about going back.</p>
+
+        <div class="article-footer reveal">
+          <div class="tags" aria-label="Article tags">
+            <!-- <a class="tag" href="/tag/kodaikanal">Kodaikanal</a>
+            <a class="tag" href="/tag/tamil-nadu">Tamil Nadu</a>
+            <a class="tag" href="/tag/hill-stations">Hill Stations</a>
+            <a class="tag" href="/tag/western-ghats">Western Ghats</a>
+            <a class="tag" href="/tag/slow-travel">Slow Travel</a>
+            <a class="tag" href="/tag/india">India</a> -->
+          </div>
+          <a class="back-btn" href="/" style="display:inline-block; margin-top:8px;">← Back to Hillscape</a>
+        </div>
+
+      </article>
+    </div>
+
+    <!-- Related Stories -->
+    <section class="related-section" aria-label="Related stories">
+      <div class="related-inner">
+        <p class="section-label">More from the Hills</p>
+        <div class="related-grid">
+
+          <a class="related-card" href="/stories/ooty-story/">
+            <div class="related-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1660918738010-295b09857f93?w=600&q=75&auto=format&fit=crop"
+                alt="Rolling Nilgiri hills at golden hour, layers of blue ridges"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">The Nilgiris</p>
+            <h3 class="related-card-title">72 Hours in Ooty: A Blue Mountain Odyssey</h3>
+            <p class="related-card-excerpt">Toy trains, botanical gardens, Doddabetta at dawn — the Queen of Hill Stations in three unhurried days.</p>
+          </a>
+
+          <a class="related-card" href="/stories/wayanad-story/">
+            <div class="related-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1619020905969-ba8d47f8c7cf?w=600&q=75&auto=format&fit=crop"
+                alt="Rolling tea estate in Kerala highlands, green rows curving over hillside at dawn"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">Tea Country</p>
+            <h3 class="related-card-title">Wayanad's Wild Soul: Forest, Tribe & Tea</h3>
+            <p class="related-card-excerpt">A journey through Kerala's most ecologically rich district, where ancient Adivasi culture meets pristine wilderness.</p>
+          </a>
+
+          <a class="related-card" href="/stories/coorg-story/">
+            <div class="related-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1710612198146-77512950a4b7?w=600&q=75&auto=format&fit=crop"
+                alt="Forested valley in Karnataka during monsoon, clouds low over green hills, waterfalls visible on distant slopes"
+                loading="lazy"
+              />
+            </div>
+            <p class="related-card-cat">Monsoon Escapes</p>
+            <h3 class="related-card-title">Coorg in the Rain: A Guide to Arriving Wet</h3>
+            <p class="related-card-excerpt">The Scotland of India at its most dramatic — why Coorg's monsoon season is its best-kept secret.</p>
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <a href="https://www.hillscape.netlify.app">Hillscape</a>
+    <p>&copy; 2026 Hillscape Magazine. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Progress bar
+    const bar = document.getElementById('progress-bar');
+    function updateProgress() {
+      const article = document.getElementById('article-body');
+      const rect = article.getBoundingClientRect();
+      const total = article.offsetHeight - window.innerHeight;
+      const pct = Math.min(100, Math.max(0, (-rect.top / total) * 100));
+      bar.style.width = pct + '%';
+      bar.setAttribute('aria-valuenow', Math.round(pct));
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    updateProgress();
+
+    // Reading time
+    const words = (document.getElementById('article-body').innerText || '').split(/\s+/).filter(Boolean).length;
+    document.getElementById('read-time').textContent = Math.ceil(words / 220) + ' min read';
+
+    // Reveal on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Active TOC
+    const sections = ['arrival','lake','pine-forest','coakers','chocolate','pillar-rocks','departure']
+      .map(id => document.getElementById(id)).filter(Boolean);
+    const tocLinks = document.querySelectorAll('.toc-list a');
+    const tocObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          tocLinks.forEach(a => a.classList.remove('active'));
+          const lnk = document.querySelector(`.toc-list a[href="#${e.target.id}"]`);
+          if (lnk) lnk.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-28% 0px -62% 0px' });
+    sections.forEach(s => tocObs.observe(s));
+  </script>
+
+</body>
+</html>

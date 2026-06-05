@@ -1,0 +1,1389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hillscape — Where Mountains Tell Stories</title>
+<meta name="description" content="Hillscape is a premium travel publication exploring the world's most breathtaking highland destinations through immersive storytelling and visual journalism.">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"Hillscape",
+  "url":"https://hllscape.netlify.app",
+  "logo":"https://hillscape.netlify.app/assets/images/logo/logo.png"
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
+
+<link rel="icon" href="assets/images/logo/favicon.ico">
+
+<link rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/images/logo/favicon-32x32.png">
+
+<link rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/images/logo/favicon-16x16.png">
+
+<link rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/images/logo/apple-touch-icon.png">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-deep:    #1a2b1f;
+    --green-mid:     #243828;
+    --green-muted:   #3a5240;
+    --green-light:   #5c7a62;
+    --gold:          #c9a84c;
+    --gold-light:    #e2c97e;
+    --gold-pale:     #f5edcf;
+    --earth-warm:    #8b6f47;
+    --earth-sand:    #d4b896;
+    --earth-cream:   #f7f2eb;
+    --earth-linen:   #ede8df;
+    --white:         #fdfcf9;
+    --black:         #0e1510;
+    --text-dark:     #1c2820;
+    --text-mid:      #4a5e4f;
+    --text-light:    #8a9e8f;
+    --font-display:  'Playfair Display', Georgia, serif;
+    --font-editorial:'Cormorant Garamond', Georgia, serif;
+    --font-body:     'DM Sans', system-ui, sans-serif;
+    --ease-silk:     cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--white);
+    color: var(--text-dark);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { display: block; width: 100%; object-fit: cover; }
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+  /* ============ SCROLLBAR ============ */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--green-deep); }
+  ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+  /* ============ NAV ============ */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 15px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: all 0.5s var(--ease-silk);
+  }
+  nav.scrolled {
+    background: rgba(26,43,31,0.96);
+    backdrop-filter: blur(20px);
+    padding: 0px 48px;
+    box-shadow: 0 1px 0 rgba(201,168,76,0.2);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: 0.02em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-logo-icon {
+    width: 30px; height: 30px;
+    /* background: var(--gold);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%); */
+  }
+  .nav-links {
+    display: flex; align-items: center; gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; right: 100%;
+    height: 1px; background: var(--gold);
+    transition: right 0.3s var(--ease-silk);
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { right: 0; }
+  .nav-cta {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--gold);
+    padding: 11px 26px;
+    border-radius: 2px;
+    transition: all 0.3s var(--ease-silk);
+  }
+  .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 8px 20px rgba(201,168,76,0.3); }
+
+  /* ============ HERO ============ */
+  .hero {
+    position: relative;
+    height: 100vh; min-height: 700px;
+    display: flex; align-items: flex-end;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      linear-gradient(to bottom, rgba(14,21,16,0.2) 0%, rgba(14,21,16,0.1) 40%, rgba(14,21,16,0.7) 100%),
+      url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=85') center/cover no-repeat;
+    transform: scale(1.05);
+    animation: heroZoom 18s var(--ease-silk) forwards;
+  }
+  @keyframes heroZoom { from { transform: scale(1.05); } to { transform: scale(1); } }
+
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 0 80px 100px;
+    max-width: 900px;
+    animation: heroReveal 1.2s 0.4s var(--ease-silk) both;
+  }
+  @keyframes heroReveal { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .hero-eyebrow::before { content: ''; display: block; width: 40px; height: 1px; background: var(--gold); }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 7vw, 7rem);
+    font-weight: 800;
+    line-height: 0.95;
+    color: var(--white);
+    margin-bottom: 28px;
+    letter-spacing: -0.02em;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+
+  .hero-sub {
+    font-family: var(--font-editorial);
+    font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+    font-weight: 300;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.6;
+    max-width: 520px;
+    margin-bottom: 44px;
+  }
+
+  .hero-actions { display: flex; align-items: center; gap: 28px; }
+
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--black);
+    background: var(--gold);
+    padding: 16px 36px;
+    border-radius: 2px;
+    transition: all 0.3s var(--ease-silk);
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 12px 30px rgba(201,168,76,0.4); }
+  .btn-primary svg { transition: transform 0.3s; }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  .btn-ghost {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+    padding: 16px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    transition: all 0.3s;
+  }
+  .btn-ghost:hover { color: var(--gold); border-color: var(--gold); }
+
+  .scroll-indicator {
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    z-index: 2; animation: fadeInUp 1s 1.5s both;
+  }
+  @keyframes fadeInUp { from { opacity: 0; transform: translateX(-50%) translateY(20px); } to { opacity: 1; transform: translateX(-50%) translateY(0); } }
+  .scroll-indicator span {
+    font-family: var(--font-body); font-size: 0.65rem; letter-spacing: 0.2em;
+    text-transform: uppercase; color: rgba(255,255,255,0.5);
+  }
+  .scroll-line {
+    width: 1px; height: 56px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+  @keyframes scrollPulse { 0%,100% { opacity: 0.4; transform: scaleY(0.6); transform-origin: top; } 50% { opacity: 1; transform: scaleY(1); } }
+
+  /* ============ TICKER ============ */
+  .ticker {
+    background: var(--green-deep);
+    padding: 14px 0;
+    overflow: hidden;
+    border-top: 1px solid rgba(201,168,76,0.2);
+  }
+  .ticker-track {
+    display: flex; gap: 60px;
+    animation: tickerMove 25s linear infinite;
+    white-space: nowrap;
+  }
+  @keyframes tickerMove { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .ticker-item {
+    display: inline-flex; align-items: center; gap: 16px;
+    font-family: var(--font-body); font-size: 0.72rem;
+    letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.5);
+  }
+  .ticker-dot { width: 4px; height: 4px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+
+  /* ============ SECTIONS COMMON ============ */
+  .section { padding: 100px 0; }
+  .section-inner { max-width: 1320px; margin: 0 auto; padding: 0 48px; }
+
+  .label {
+    font-family: var(--font-body); font-size: 0.7rem;
+    letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500;
+    display: inline-flex; align-items: center; gap: 12px;
+  }
+  .label::before { content: ''; display: block; width: 32px; height: 1px; background: var(--gold); }
+
+  .section-header { margin-bottom: 64px; }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-weight: 800; line-height: 1.05;
+    letter-spacing: -0.02em; color: var(--text-dark);
+    margin-top: 16px;
+  }
+  .section-title em { font-style: italic; color: var(--green-muted); }
+  .section-sub {
+    font-family: var(--font-editorial); font-size: 1.15rem;
+    font-weight: 300; color: var(--text-mid);
+    line-height: 1.7; max-width: 480px; margin-top: 16px;
+  }
+
+  /* ============ FEATURED STORY ============ */
+  .featured { background: var(--earth-cream); }
+  .featured-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px rgba(26,43,31,0.12);
+    
+  }
+  .featured-image-wrap {
+    position: relative; overflow: hidden;
+    min-height: 640px;
+  }
+  .featured-image-wrap img {
+    height: 100%;
+    transition: transform 0.9s var(--ease-silk);
+  }
+  .featured-image-wrap:hover img { transform: scale(1.04); }
+  .featured-image-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(120deg, rgba(26,43,31,0.5) 0%, transparent 60%);
+  }
+  .featured-tag {
+    position: absolute; top: 28px; left: 28px;
+    background: var(--gold);
+    color: var(--black);
+    font-family: var(--font-body); font-size: 0.65rem;
+    font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase;
+    padding: 8px 16px; border-radius: 2px;
+  }
+  .featured-body {
+    background: var(--green-deep);
+    padding: 72px 64px;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative; overflow: hidden;
+  }
+  .featured-body::before {
+    content: '"';
+    position: absolute; top: -40px; right: 40px;
+    font-family: var(--font-display); font-size: 22rem;
+    color: rgba(255,255,255,0.03); line-height: 1;
+    pointer-events: none;
+  }
+  .featured-category {
+    font-family: var(--font-body); font-size: 0.68rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); font-weight: 500;
+    margin-bottom: 20px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .featured-category::before { content: ''; width: 28px; height: 1px; background: var(--gold); }
+  .featured-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 700; line-height: 1.1;
+    color: var(--white); margin-bottom: 24px; letter-spacing: -0.01em;
+  }
+  .featured-title em { font-style: italic; color: var(--gold-light); }
+  .featured-excerpt {
+    font-family: var(--font-editorial); font-size: 1.05rem;
+    font-weight: 300; color: rgba(255,255,255,0.65);
+    line-height: 1.75; margin-bottom: 40px;
+  }
+  .featured-meta {
+    display: flex; align-items: center; gap: 20px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  .meta-avatar {
+    width: 44px; height: 44px; border-radius: 50%;
+    overflow: hidden; border: 2px solid var(--gold);
+    flex-shrink: 0;
+  }
+  .meta-avatar img { height: 44px; }
+  .meta-info { display: flex; flex-direction: column; gap: 3px; }
+  .meta-author { font-family: var(--font-body); font-size: 0.82rem; font-weight: 500; color: var(--white); }
+  .meta-date { font-family: var(--font-body); font-size: 0.72rem; color: rgba(255,255,255,0.4); letter-spacing: 0.05em; }
+  .read-link {
+    margin-left: auto;
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--font-body); font-size: 0.75rem;
+    font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--gold);
+    transition: gap 0.3s;
+  }
+  .read-link:hover { gap: 14px; }
+
+  /* ============ EXPERIENCES ============ */
+  .experiences { background: var(--white); }
+  .exp-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+  }
+  .exp-card {
+    position: relative; border-radius: 4px; overflow: hidden;
+    cursor: pointer; group: true;
+  }
+  .exp-card:nth-child(1) { grid-column: span 2; }
+  .exp-card:nth-child(2) { grid-column: span 2; }
+  .exp-card:nth-child(3) { grid-column: span 2; }
+  .exp-card:nth-child(4) { grid-column: span 3; }
+  .exp-card:nth-child(5) { grid-column: span 3; }
+  .exp-card:nth-child(6) { grid-column: span 2; }
+
+  .exp-img-wrap { position: relative; overflow: hidden; height: 260px; }
+  .exp-card:nth-child(4) .exp-img-wrap,
+  .exp-card:nth-child(5) .exp-img-wrap { height: 320px; }
+
+  .exp-img-wrap img { height: 100%; transition: transform 0.7s var(--ease-silk); }
+  .exp-card:hover .exp-img-wrap img { transform: scale(1.06); }
+  .exp-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(14,21,16,0.85) 0%, rgba(14,21,16,0.1) 60%);
+    transition: background 0.4s;
+  }
+  .exp-card:hover .exp-overlay { background: linear-gradient(to top, rgba(14,21,16,0.9) 0%, rgba(14,21,16,0.3) 60%); }
+  .exp-content {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 24px 22px;
+  }
+  .exp-icon {
+    width: 36px; height: 36px; margin-bottom: 10px;
+    background: rgba(201,168,76,0.2); border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    transform: translateY(8px); opacity: 0;
+    transition: all 0.4s var(--ease-silk);
+  }
+  .exp-card:hover .exp-icon { opacity: 1; transform: translateY(0); }
+  .exp-name {
+    font-family: var(--font-display); font-size: 1.2rem;
+    font-weight: 700; color: var(--white);
+    margin-bottom: 6px; line-height: 1.15;
+  }
+  .exp-count {
+    font-family: var(--font-body); font-size: 0.7rem;
+    letter-spacing: 0.12em; color: var(--gold); text-transform: uppercase;
+  }
+
+  /* ============ GUIDES ============ */
+  .guides { background: var(--earth-linen); }
+  .guides-layout { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 24px; }
+
+  .guide-card {
+    border-radius: 4px; overflow: hidden;
+    background: var(--white);
+    box-shadow: 0 4px 24px rgba(26,43,31,0.06);
+    transition: transform 0.4s var(--ease-silk), box-shadow 0.4s;
+    cursor: pointer;
+  }
+  .guide-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(26,43,31,0.14); }
+  .guide-card.featured-card { grid-row: span 2; }
+
+  .guide-img-wrap { position: relative; overflow: hidden; }
+  .guide-card:not(.featured-card) .guide-img-wrap { height: 220px; }
+  .guide-card.featured-card .guide-img-wrap { height: 100%; min-height: 380px; }
+  .guide-img-wrap img { height: 100%; transition: transform 0.7s var(--ease-silk); }
+  .guide-card:hover .guide-img-wrap img { transform: scale(1.05); }
+
+  .guide-body { padding: 28px 28px 32px; }
+  .guide-tag {
+    display: inline-block;
+    font-family: var(--font-body); font-size: 0.62rem;
+    letter-spacing: 0.18em; text-transform: uppercase; font-weight: 600;
+    color: var(--green-muted); background: rgba(60,82,64,0.1);
+    padding: 5px 12px; border-radius: 2px; margin-bottom: 14px;
+  }
+  .guide-title {
+    font-family: var(--font-display); font-size: 1.35rem;
+    font-weight: 700; line-height: 1.2; color: var(--text-dark);
+    margin-bottom: 12px; letter-spacing: -0.01em;
+  }
+  .guide-card.featured-card .guide-title { font-size: 1.75rem; }
+  .guide-excerpt {
+    font-family: var(--font-editorial); font-size: 0.98rem;
+    font-weight: 300; color: var(--text-mid); line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  .guide-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 16px; border-top: 1px solid var(--earth-linen);
+  }
+  .guide-author { font-family: var(--font-body); font-size: 0.75rem; color: var(--text-light); }
+  .guide-read {
+    font-family: var(--font-body); font-size: 0.72rem;
+    font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--green-muted); display: flex; align-items: center; gap: 6px;
+    transition: gap 0.3s, color 0.3s;
+  }
+  .guide-read:hover { gap: 12px; color: var(--gold); }
+
+  /* ============ GALLERY ============ */
+  .gallery { background: var(--white); }
+  .gallery-grid {
+    columns: 4;
+    column-gap: 12px;
+  }
+  .gallery-item {
+    break-inside: avoid;
+    margin-bottom: 12px;
+    position: relative; overflow: hidden; border-radius: 3px;
+    cursor: pointer;
+  }
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.6s var(--ease-silk), filter 0.4s;
+    display: block;
+  }
+  .gallery-item:hover img { transform: scale(1.05); filter: brightness(0.85); }
+  .gallery-item-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(26,43,31,0.7) 0%, transparent 50%);
+    opacity: 0; transition: opacity 0.4s;
+    display: flex; align-items: flex-end;
+    padding: 16px;
+  }
+  .gallery-item:hover .gallery-item-overlay { opacity: 1; }
+  .gallery-item-label {
+    font-family: var(--font-display); font-size: 0.95rem;
+    font-weight: 600; color: var(--white);
+  }
+
+  /* ============ WHY HILLSCAPE ============ */
+  .why { background: var(--green-deep); overflow: hidden; position: relative; }
+  .why::before {
+    content: 'HILLSCAPE';
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    font-family: var(--font-display); font-size: 18rem; font-weight: 900;
+    color: rgba(255,255,255,0.03); white-space: nowrap; pointer-events: none;
+    letter-spacing: -0.02em;
+  }
+  .why .section-title { color: var(--white); }
+  .why .section-sub { color: rgba(255,255,255,0.55); }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 80px; }
+  .why-item {
+    padding: 48px 36px;
+    border: 1px solid rgba(255,255,255,0.06);
+    position: relative; overflow: hidden;
+    transition: background 0.4s;
+  }
+  .why-item:hover { background: rgba(255,255,255,0.04); }
+  .why-number {
+    font-family: var(--font-display); font-size: 4rem; font-weight: 800;
+    color: rgba(201,168,76,0.15); line-height: 1; margin-bottom: 20px;
+    letter-spacing: -0.03em;
+  }
+  .why-icon { font-size: 2rem; margin-bottom: 16px; }
+  .why-item-title {
+    font-family: var(--font-display); font-size: 1.25rem;
+    font-weight: 700; color: var(--white); margin-bottom: 14px;
+  }
+  .why-item-text {
+    font-family: var(--font-editorial); font-size: 0.98rem;
+    font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.75;
+  }
+
+  /* ============ DESTINATIONS ============ */
+  .destinations { background: var(--earth-cream); }
+  .dest-intro { max-width: 640px; margin-bottom: 64px; }
+  .coming-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3);
+    color: var(--gold); font-family: var(--font-body);
+    font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase;
+    font-weight: 600; padding: 6px 16px; border-radius: 20px; margin-bottom: 20px;
+  }
+  .coming-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: blink 1.5s ease-in-out infinite; }
+  @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .dest-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+  .dest-card {
+    position: relative; border-radius: 4px; overflow: hidden;
+    cursor: pointer; aspect-ratio: 3/4;
+  }
+  .dest-card img { height: 100%; transition: transform 0.7s var(--ease-silk), filter 0.5s; }
+  .dest-card:hover img { transform: scale(1.06); filter: brightness(0.85); }
+  .dest-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(14,21,16,0.88) 0%, transparent 55%);
+  }
+  .dest-content {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 24px 20px;
+  }
+  .dest-state {
+    font-family: var(--font-body); font-size: 0.62rem;
+    letter-spacing: 0.16em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 6px; font-weight: 500;
+  }
+  .dest-name {
+    font-family: var(--font-display); font-size: 1.4rem;
+    font-weight: 800; color: var(--white); line-height: 1.1;
+  }
+  .dest-soon {
+    display: inline-block; margin-top: 10px;
+    font-family: var(--font-body); font-size: 0.6rem;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.1);
+    padding: 4px 10px; border-radius: 2px;
+  }
+  .dest-card:hover .dest-soon { color: var(--gold); background: rgba(201,168,76,0.15); }
+
+  /* ============ NEWSLETTER ============ */
+  .newsletter {
+    background: var(--green-deep);
+    position: relative; overflow: hidden;
+  }
+  .newsletter::after {
+    content: '';
+    position: absolute; top: 0; right: 0; bottom: 0;
+    width: 45%;
+    background: url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&q=80') center/cover;
+    opacity: 0.2;
+  }
+  .newsletter .section-inner { position: relative; z-index: 1; }
+  .newsletter-content { max-width: 620px; }
+  .newsletter .section-title { color: var(--white); }
+  .newsletter-sub {
+    font-family: var(--font-editorial); font-size: 1.15rem;
+    font-weight: 300; color: rgba(255,255,255,0.6);
+    line-height: 1.7; margin: 20px 0 40px;
+  }
+  .newsletter-form {
+    display: flex; gap: 0;
+    border: 1px solid rgba(201,168,76,0.4);
+    border-radius: 2px; overflow: hidden;
+    max-width: 520px;
+  }
+  .newsletter-input {
+    flex: 1; padding: 18px 24px;
+    background: rgba(255,255,255,0.06);
+    border: none; outline: none;
+    font-family: var(--font-body); font-size: 0.9rem;
+    color: var(--white);
+    transition: background 0.3s;
+  }
+  .newsletter-input::placeholder { color: rgba(255,255,255,0.35); }
+  .newsletter-input:focus { background: rgba(255,255,255,0.1); }
+  .newsletter-btn {
+    padding: 18px 32px;
+    background: var(--gold); color: var(--black);
+    font-family: var(--font-body); font-size: 0.75rem;
+    font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase;
+    transition: background 0.3s;
+    white-space: nowrap;
+  }
+  .newsletter-btn:hover { background: var(--gold-light); }
+  .newsletter-note {
+    font-family: var(--font-body); font-size: 0.72rem;
+    color: rgba(255,255,255,0.3); margin-top: 16px; letter-spacing: 0.04em;
+  }
+  .newsletter-perks {
+    display: flex; gap: 32px; margin-top: 48px;
+  }
+  .perk {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-body); font-size: 0.78rem;
+    color: rgba(255,255,255,0.55); letter-spacing: 0.04em;
+  }
+  .perk-icon { color: var(--gold); font-size: 1rem; }
+
+  /* ============ FOOTER ============ */
+  footer {
+    background: var(--black);
+    padding: 80px 0 40px;
+  }
+  .footer-inner { max-width: 1320px; margin: 0 auto; padding: 0 48px; }
+  .footer-top {
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr;
+    gap: 60px; padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .footer-brand .nav-logo { margin-bottom: 20px; }
+  .footer-tagline {
+    font-family: var(--font-editorial); font-size: 1rem;
+    font-weight: 300; color: rgba(255,255,255,0.4); line-height: 1.7;
+    margin-bottom: 28px;
+  }
+  .footer-socials { display: flex; gap: 12px; }
+  .social-link {
+    width: 38px; height: 38px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem; color: rgba(255,255,255,0.5);
+    transition: all 0.3s;
+    text-decoration: none;
+  }
+  .social-link:hover { background: var(--gold); color: var(--black); border-color: var(--gold); }
+
+  .footer-col-title {
+    font-family: var(--font-body); font-size: 0.72rem;
+    letter-spacing: 0.2em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600; margin-bottom: 24px;
+  }
+  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+  .footer-links a {
+    font-family: var(--font-body); font-size: 0.85rem;
+    color: rgba(255,255,255,0.45);
+    transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+
+  .footer-bottom {
+    padding-top: 32px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-copy {
+    font-family: var(--font-body); font-size: 0.75rem;
+    color: rgba(255,255,255,0.2); letter-spacing: 0.05em;
+  }
+  .footer-copy span { color: var(--gold); }
+  .footer-legal { display: flex; gap: 24px; }
+  .footer-legal a {
+    font-family: var(--font-body); font-size: 0.72rem;
+    color: rgba(255,255,255,0.25);
+    transition: color 0.3s; letter-spacing: 0.04em;
+  }
+  .footer-legal a:hover { color: var(--gold); }
+
+  /* ============ DIVIDER ============ */
+  .ornament {
+    text-align: center; padding: 0; overflow: hidden;
+    display: flex; align-items: center; justify-content: center; gap: 20px;
+  }
+  .ornament::before, .ornament::after {
+    content: ''; flex: 1; height: 1px;
+    background: linear-gradient(to right, transparent, var(--earth-sand));
+  }
+  .ornament::after { background: linear-gradient(to left, transparent, var(--earth-sand)); }
+  .ornament-symbol { color: var(--gold); font-size: 0.9rem; }
+
+  .card {
+  margin-bottom: 40px;
+}
+
+.logo img{
+  height: 80px;;
+  width:auto;
+  display:block;
+}
+
+  /* ============ MOBILE ============ */
+  .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+  .hamburger span { display: block; width: 24px; height: 1.5px; background: white; transition: all 0.3s; }
+
+  @media (max-width: 1100px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .exp-grid { grid-template-columns: repeat(3, 1fr); }
+    .exp-card:nth-child(n) { grid-column: span 1; }
+    .guides-layout { grid-template-columns: 1fr 1fr; }
+    .guide-card.featured-card { grid-column: span 2; grid-row: auto; }
+    .guide-card.featured-card .guide-img-wrap { height: 340px; }
+    .gallery-grid { columns: 3; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .dest-grid { grid-template-columns: repeat(3, 1fr); }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 40px; }
+  }
+
+  @media (max-width: 768px) {
+    .section { padding: 72px 0; }
+    .section-inner { padding: 0 24px; }
+    nav { padding: 16px 24px; }
+    nav.scrolled { padding: 12px 24px; }
+    .hero-content { padding: 0 24px 80px; }
+    .hero-title { font-size: 3rem; }
+    .featured-grid { grid-template-columns: 1fr; }
+    .featured-image-wrap { min-height: 320px; }
+    .featured-body { padding: 48px 32px; }
+    .exp-grid { grid-template-columns: repeat(2, 1fr); }
+    .guides-layout { grid-template-columns: 1fr; }
+    .guide-card.featured-card { grid-column: span 1; }
+    .gallery-grid { columns: 2; }
+    .why-grid { grid-template-columns: 1fr; }
+    .dest-grid { grid-template-columns: repeat(2, 1fr); }
+    .dest-card:last-child { grid-column: span 2; aspect-ratio: 16/7; }
+    .newsletter-perks { flex-direction: column; gap: 16px; }
+    .footer-top { grid-template-columns: 1fr; gap: 36px; }
+    .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  }
+
+  /* ============ ANIMATIONS ============ */
+  .reveal {
+    opacity: 0; transform: translateY(36px);
+    transition: opacity 0.8s var(--ease-silk), transform 0.8s var(--ease-silk);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav id="nav">
+  <!-- <a href="#" class="nav-logo">
+    <div class="nav-logo-icon"></div>
+    Hill<span>scape</span>
+  </a> -->
+  <a href="/" class="logo">
+  <img
+    src="assets/images/logo/logo.svg"
+    alt="Hillscape"
+    width="180"
+    height="20"
+  >
+   
+</a>
+  <ul class="nav-links">
+    <li><a href="#destination">Destinations</a></li>
+    <li><a href="#experiences">Guides</a></li>
+    <li><a href="#story">Stories</a></li>
+    <li><a href="about/">About</a></li>
+    <li><a href="contact/">Contact</a></li>
+  </ul>
+  <a href="#" class="nav-cta">Explore</a>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Featured Destination — Western Ghats</div>
+    <h1 class="hero-title">Where Mist<br>Meets the <em>Mountain</em></h1>
+    <p class="hero-sub">Immersive storytelling from the world's most breathtaking highland escapes. Every journey, a chapter worth remembering.</p>
+    <div class="hero-actions">
+      <a href="#experiences" class="btn-primary">
+        Begin Exploring
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <!-- <a href="#" class="btn-ghost">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+        Watch Film
+      </a> -->
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ============ TICKER ============ -->
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack">
+    <span class="ticker-item"><span class="ticker-dot"></span>Ooty Highlands</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Munnar Tea Gardens</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Coonoor Viewpoints</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Wayanad Forests</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Yercaud Sunrise</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Kodaikanal Lakes</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Coorg Coffee Trails</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Sakleshpur Trekking</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Ooty Highlands</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Munnar Tea Gardens</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Coonoor Viewpoints</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Wayanad Forests</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Yercaud Sunrise</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Kodaikanal Lakes</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Coorg Coffee Trails</span>
+    <span class="ticker-item"><span class="ticker-dot"></span>Sakleshpur Trekking</span>
+  </div>
+</div>
+
+<!-- ============ FEATURED STORY ============ -->
+<section class="section featured">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="label">Featured Story</div>
+      <h2 class="section-title">The Story Worth <em>Reading</em></h2>
+    </div>
+    <div class="featured-grid reveal">
+      <div class="featured-image-wrap">
+        <img src="https://images.unsplash.com/photo-1692792284356-f80113facd09?auto=format&fit=crop&w=1600&q=80" alt="Munnar Tea Gardens" loading="lazy">
+        <div class="featured-image-overlay"></div>
+        <div class="featured-tag">Editor's Pick</div>
+      </div>
+      <div class="featured-body">
+        <div class="featured-category">Highlands of Tamil Nadu</div>
+        <h3 class="featured-title">Into the <em>Silver Mist</em> of Kodaikanal</h3>
+        <p class="featured-excerpt">There's a particular quality of morning light at 7,000 feet — the way it drifts through pine-scented mist, softening every ridge and valley into shades of silver and blue. Kodaikanal doesn't simply welcome you; it invites you to slow down, to wander its forested paths and quiet viewpoints, and to rediscover a gentler rhythm hidden high above the plains.</p>
+        <div class="featured-meta">
+          <!-- <div class="meta-avatar">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Author">
+          </div> -->
+          <div class="meta-info">
+            <em class="read-link">- Hillscape Traveller</em>
+            <!-- <span class="meta-date">May 18, 2025 · 8 min read</span> -->
+          </div>
+          <a href="stories/kodaikanal-story/" class="read-link">
+            Read Full Story
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card"> </div>
+
+    <div class="featured-grid reveal">
+      <div class="featured-image-wrap">
+        <img src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?w=1600&q=80" alt="Munnar Tea Gardens" loading="lazy">
+        <div class="featured-image-overlay"></div>
+        <div class="featured-tag">Editor's Pick</div>
+      </div>
+      <div class="featured-body">
+        <div class="featured-category">Highlands of Kerala</div>
+        <h3 class="featured-title">Into the <em>Infinite Green</em> of Munnar's Hills</h3>
+        <p class="featured-excerpt">There's a particular quality of morning light at 5,500 feet — the way it filters through tea-laden mist, gilding every leaf silver. Munnar doesn't simply welcome you; it absorbs you into something older, quieter, and far more beautiful than the world you left behind.</p>
+        <div class="featured-meta">
+          <!-- <div class="meta-avatar">
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Author">
+          </div> -->
+          <div class="meta-info">
+            <!-- <span class="meta-author">Priya Nair</span>
+             
+            <span class="meta-date">May 18, 2025 · 8 min read</span> -->
+            <em class="read-link">- Hillscape Traveller</em>
+          </div>
+          <!-- <a href="kodaikanal-travel-story.html" class="read-link">
+            Read Full Story
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a> -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCES ============ -->
+<section class="section experiences" id="experiences">
+  <div class="section-inner">
+    <div class="section-header reveal" style="display:flex; justify-content:space-between; align-items:flex-end;">
+      <div>
+        <div class="label">Discover</div>
+        <h2 class="section-title">Explore by <em>Experience</em></h2>
+      </div>
+      <a href="#experiences" class="btn-ghost" style="color:var(--text-mid); border-color:var(--earth-sand);">
+        View All
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="exp-grid">
+      <div class="exp-card reveal reveal-delay-1">
+        <a href="kodaikanal/guides/best-sunrise-spots/" style="text-decoration:none; color:inherit;">
+        <div class="exp-img-wrap">
+          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=700&q=80" alt="Sunrise Spots" loading="lazy">
+          <div class="exp-overlay"></div>
+        </div>
+        
+        <div class="exp-content">
+          <div class="exp-icon">🌅</div>
+          <div class="exp-name">Sunrise Spots</div>
+          <div class="exp-count">early escape</div>
+        </div>
+        </a>
+      </div>
+      <div class="exp-card reveal reveal-delay-2">
+        <a href="kodaikanal/guides/valley-view-resorts/" style="text-decoration:none; color:inherit;">
+        <div class="exp-img-wrap">
+          <img src="https://images.unsplash.com/photo-1665481193027-d5d2c5ee9fc3?w=700&q=80" alt="Viewpoints" loading="lazy">
+          <div class="exp-overlay"></div>
+        </div>
+        
+        <div class="exp-content">
+          <div class="exp-icon">🏔</div>
+          <div class="exp-name">Valley view resorts</div>
+          <div class="exp-count">views from cottages</div>
+        </div>
+        </a>
+      </div>
+      <div class="exp-card reveal reveal-delay-3">
+        <a href="kodaikanal/guides/kodaikanal-boating-guide/" style="text-decoration:none; color:inherit;">
+        <div class="exp-img-wrap">
+          <img src="https://images.unsplash.com/photo-1608729974503-b9e254f8356c?w=700&q=80" alt="Waterfalls" loading="lazy">
+          <div class="exp-overlay"></div>
+        </div>
+       
+
+        <div class="exp-content">
+          <div class="exp-icon">💧</div>
+          <div class="exp-name">Boating Guide</div>
+          <div class="exp-count">Time to experience</div>
+        </div>
+         </a>
+      </div>
+      
+      <div class="exp-card reveal reveal-delay-1">
+        <a href="kodaikanal/guides/two-day-itinerary/" style="text-decoration:none; color:inherit;">
+
+                <div class="exp-img-wrap">
+          <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=900&q=80" alt="Trekking Trails" loading="lazy">
+          <div class="exp-overlay"></div>
+        </div>
+        
+        <div class="exp-content">
+          <div class="exp-icon">🚙</div>
+          <div class="exp-name">2 Day Itinerary</div>
+          <div class="exp-count">Quick Escape</div>
+        </div>
+        </a>
+      </div>
+      
+       <div class="exp-card reveal reveal-delay-2">
+        <a href="kodaikanal/guides/hidden-places-kodaikanal/" style="text-decoration:none; color:inherit;">
+        <div class="exp-img-wrap">
+          <img src="https://images.unsplash.com/photo-1586348943529-beaae6c28db9?w=900&q=80" alt="Hidden Gems" loading="lazy">
+          <div class="exp-overlay"></div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-icon">💎</div>
+          <div class="exp-name">Hidden Gems</div>
+          <div class="exp-count">Feel alive</div>
+        </div>
+        </a>
+      </div>
+     <div class="exp-card reveal reveal-delay-3">
+        <a href="kodaikanal/guides/kodaikanal-weather/" style="text-decoration:none; color:inherit;">
+        <div class="exp-img-wrap">
+          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?w=700&q=80" alt="Travel Tips" loading="lazy">
+          <div class="exp-overlay"></div>
+        </div>
+        <div class="exp-content">
+          <div class="exp-icon">📍</div>
+          <div class="exp-name">Kodaikanal weather</div>
+          <div class="exp-count">Prepare</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GUIDES ============ -->
+<section class="section guides" id="story">
+  <div class="section-inner">
+    <div class="section-header reveal" style="display:flex; justify-content:space-between; align-items:flex-end;">
+      <div>
+        <div class="label">Featured Guides</div>
+        <h2 class="section-title">Stories Worth <em>Keeping</em></h2>
+        <p class="section-sub">Meticulously researched travel narratives written by those who lived them.</p>
+      </div>
+    </div>
+    <div class="guides-layout">
+      <div class="guide-card reveal reveal-delay-1">
+        <div class="guide-img-wrap">
+          <img src="https://images.unsplash.com/photo-1660918738010-295b09857f93?w=900&q=85" alt="Ooty Guide" loading="lazy">
+        </div>
+        <div class="guide-body">
+          <span class="guide-tag">Complete Guide</span>
+          <h3 class="guide-title">72 Hours in Ooty: A Blue Mountain Odyssey</h3>
+          <p class="guide-excerpt">From the fog-wrapped botanical gardens to the last toy train to Coonoor as dusk paints the Nilgiris amber — a definitive guide to the Queen of Hill Stations.</p>
+          <div class="guide-footer">
+            <!-- <span class="guide-author">By Arjun Pillai · 12 min read</span> -->
+            <a href="stories/ooty-story/" class="guide-read">
+              Read Guide
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    
+
+      <div class="guide-card reveal reveal-delay-2">
+        <div class="guide-img-wrap">
+          <img src="https://images.unsplash.com/photo-1619020905969-ba8d47f8c7cf?w=700&q=80" alt="Wayanad Guide" loading="lazy">
+        </div>
+        <div class="guide-body">
+          <span class="guide-tag">Nature & Wildlife</span>
+          <h3 class="guide-title">Wayanad's Wild Soul: Forest, Tribe & Tea</h3>
+          <p class="guide-excerpt">A journey through Kerala's most ecologically rich district, where ancient Adivasi culture meets pristine wilderness.</p>
+          <div class="guide-footer">
+            <!-- <span class="guide-author">By Meera Krishnan · 9 min</span> -->
+            <a href="stories/wayanad-story/" class="guide-read">Read <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="guide-card reveal reveal-delay-3">
+        <div class="guide-img-wrap">
+          <img src="https://images.unsplash.com/photo-1710612198146-77512950a4b7?w=700&q=80" alt="Forested valley in Karnataka during monsoon, clouds low over green hills, waterfalls visible on distant slopes"
+               loading="lazy">
+        </div>
+        <div class="guide-body">
+          <span class="guide-tag">Monsoon Escapes</span>
+          <h3 class="guide-title">Coorg in the Rain: A Guide to Arriving Wet</h3>
+          <p class="guide-excerpt">The Scotland of India at its most dramatic — why Coorg's monsoon season is its best-kept secret.</p>
+          <div class="guide-footer">
+            <!-- <span class="guide-author">By Divya Suresh · 7 min</span> -->
+            <a href="stories/coorg-story/" class="guide-read">Read <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery" id="gallery">
+  <div class="section-inner">
+    <div class="section-header reveal" style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:40px;">
+      <div>
+        <div class="label">Visual Journal</div>
+        <h2 class="section-title">Frames from the <em>Field</em></h2>
+      </div>
+      <a href="#gallery" class="btn-ghost" style="color:var(--text-mid); border-color:var(--earth-sand);">View Gallery <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="gallery-grid reveal">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1660294534543-eb2bb92ed40f?w=500&q=80" alt="Forest" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Misty Forests</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1671949454759-38faaa016e18?w=500&q=80" alt="Mountain" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">High Peaks</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1434394354979-a235cd36269d?w=500&q=80" alt="Valley" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Deep Valleys</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1713717857196-4fc8abfcc1a5?w=500&q=80" alt="Waterfall" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Hidden Falls</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=500&q=80" alt="Sunrise" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Golden Hours</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=500&q=80" alt="Lakes" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Mountain Lakes</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1585406800706-8d89d1f5ec53?w=500&q=80" alt="Tea" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Tea Country</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1456530308602-976f6a4bb440?w=500&q=80" alt="Night Sky" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Starlit Nights</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://plus.unsplash.com/premium_photo-1677347335105-1bd16607a25e?w=500&q=80" alt="Path" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Ancient Paths</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1719163343629-e56de8fc6209?w=500&q=80" alt="Wildlife" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Wild Encounters</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1572408992122-a530c9a09dbb?w=500&q=80" alt="Temple" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Sacred Places</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1664810029274-dbe57d2e38ca?w=500&q=80" alt="Cliffs" loading="lazy">
+        <div class="gallery-item-overlay"><span class="gallery-item-label">Edge of the World</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY HILLSCAPE ============ -->
+<section class="section why">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <div class="label" style="color:var(--gold);">Why Hillscape</div>
+      <h2 class="section-title" style="color:var(--white);">Crafted for Those Who <em>Wander</em> Deeply</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.5);">We don't just document destinations — we translate them into stories that stay with you long after you return home.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-item reveal reveal-delay-1">
+        <div class="why-number">01</div>
+        <div class="why-icon">🗺</div>
+        <div class="why-item-title">Expert Local Knowledge</div>
+        <p class="why-item-text">Every guide is written by someone who has breathed the mountain air, walked the trail, and earned the view. No armchair travel here.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <div class="why-number">02</div>
+        <div class="why-icon">📸</div>
+        <div class="why-item-title">Cinematic Photography</div>
+        <p class="why-item-text">Our visual storytellers capture destinations the way memory does — not as they are, but as they feel. Immersive, honest, and luminous.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-3">
+        <div class="why-number">03</div>
+        <div class="why-icon">✍️</div>
+        <div class="why-item-title">Editorial Integrity</div>
+        <p class="why-item-text">We accept no sponsored placements. Every recommendation is earned through experience, not payment. Your trust is our only currency.</p>
+      </div>
+      <div class="why-item reveal reveal-delay-4">
+        <div class="why-number">04</div>
+        <div class="why-icon">🌿</div>
+        <div class="why-item-title">Responsible Travel</div>
+        <p class="why-item-text">We champion low-impact travel, local economies, and environmental stewardship. Adventure should leave the world better than it found it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESTINATIONS ============ -->
+<section class="section destinations" id="destination">
+  <div class="section-inner">
+    <div class="dest-intro reveal">
+      <div class="coming-badge">Coming Soon</div>
+      <div class="label">Destinations</div>
+      <h2 class="section-title">The Hills Are <em>Calling</em></h2>
+      <p class="section-sub">Five legendary highland destinations. Five immersive editorial journeys. Launching this monsoon season.</p>
+    </div>
+    <div class="dest-grid">
+      <div class="dest-card reveal reveal-delay-1">
+        <img src="https://images.unsplash.com/photo-1660918738010-295b09857f93?w=600&q=80" alt="Ooty" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-content">
+          <div class="dest-state">Tamil Nadu</div>
+          <div class="dest-name">Ooty</div>
+          <span class="dest-soon">Coming Soon</span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-2">
+        <img src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9?w=600&q=80" alt="Munnar" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-content">
+          <div class="dest-state">Kerala</div>
+          <div class="dest-name">Munnar</div>
+          <span class="dest-soon">Coming Soon</span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1655276033960-7b7717fb92cd?w=600&q=80" alt="Coonoor" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-content">
+          <div class="dest-state">Tamil Nadu</div>
+          <div class="dest-name">Coonoor</div>
+          <span class="dest-soon">Coming Soon</span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-2">
+        <img src="kodaikanal/guides/kodaikanal-boating-guide/images/Yercaud.webp" alt="Yercaud" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-content">
+          <div class="dest-state">Tamil Nadu</div>
+          <div class="dest-name">Yercaud</div>
+          <span class="dest-soon">Coming Soon</span>
+        </div>
+      </div>
+      <div class="dest-card reveal reveal-delay-3">
+        <img src="https://images.unsplash.com/photo-1619020905969-ba8d47f8c7cf?w=600&q=80" alt="Wayanad" loading="lazy">
+        <div class="dest-overlay"></div>
+        <div class="dest-content">
+          <div class="dest-state">Kerala</div>
+          <div class="dest-name">Wayanad</div>
+          <span class="dest-soon">Coming Soon</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============ NEWSLETTER ============ -->
+<section class="section newsletter">
+  <div class="section-inner">
+    <div class="newsletter-content reveal">
+      <div class="label" style="color:var(--gold);">The Hillscape Journal</div>
+      <h2 class="section-title" style="color:var(--white); margin-top:16px;">Stories Delivered to<br><em>Your Doorstep</em></h2>
+      <p class="newsletter-sub">Join 14,000+ slow travellers who receive our bi-weekly dispatches from the hills — curated guides, hidden spots, and the kind of travel writing that makes you book flights.</p>
+      <!-- <div class="newsletter-form">
+        <input type="email" class="newsletter-input" placeholder="Your email address">
+        <button class="newsletter-btn">Subscribe Free</button>
+      </div>
+      <p class="newsletter-note">No spam, ever. Unsubscribe with one click. Read by 14,000+ mountain lovers.</p> -->
+      <div class="newsletter-perks">
+        <div class="perk"><span class="perk-icon">✦</span> Bi-weekly dispatches</div>
+        <div class="perk"><span class="perk-icon">✦</span> Exclusive destination guides</div>
+        <div class="perk"><span class="perk-icon">✦</span> Early access to new stories</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-logo" style="color:var(--white);">
+          <div class="nav-logo-icon"></div>
+          Hill<span style="color:var(--gold);">scape</span>
+        </div>
+        <p class="footer-tagline">A premium travel publication dedicated to the world's highland destinations. We tell the stories the mountains whisper.</p>
+        <div class="footer-socials">
+          <!-- <a href="#" class="social-link" aria-label="Instagram">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Twitter/X">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="Pinterest">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.372-12 12 0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="#" class="social-link" aria-label="YouTube">
+            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          </a> -->
+        </div>
+      </div>
+       <!-- <div>
+        <div class="footer-col-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="#">Destinations</a></li>
+          <li><a href="#">Travel Guides</a></li>
+          <li><a href="#">Photo Essays</a></li>
+          <li><a href="#">Trekking Trails</a></li>
+          <li><a href="#">Hidden Gems</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Publication</div>
+        <ul class="footer-links">
+          <li><a href="about.html">About Hillscape</a></li>
+          <li><a href="#">Our Writers</a></li>
+          <li><a href="#">Editorial Values</a></li>
+          <li><a href="#">Contribute</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Connect</div>
+        <ul class="footer-links">
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">YouTube</a></li>
+          <li><a href="#">Press Kit</a></li>
+        </ul>
+      </div> -->
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 <span>Hillscape</span>. All rights reserved. Crafted with love for the mountains.</p>
+      <div class="footer-legal">
+        <a href="privacy-policy/">Privacy Policy</a>
+        <a href="about/">About</a>
+        <a href="contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // Newsletter form
+  const form = document.querySelector('.newsletter-form');
+  const btn = document.querySelector('.newsletter-btn');
+  btn.addEventListener('click', () => {
+    const input = form.querySelector('.newsletter-input');
+    if (input.value && input.value.includes('@')) {
+      btn.textContent = '✓ Subscribed!';
+      btn.style.background = 'var(--green-muted)';
+      btn.style.color = 'white';
+      input.value = '';
+      setTimeout(() => { btn.textContent = 'Subscribe Free'; btn.style.background = ''; btn.style.color = ''; }, 3000);
+    } else {
+      input.style.borderColor = 'rgba(201,100,100,0.6)';
+      setTimeout(() => { input.style.borderColor = ''; }, 2000);
+    }
+  });
+</script>
+</body>
+</html>

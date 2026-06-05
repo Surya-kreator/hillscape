@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Hillscape</title>
+    <meta name="description" content="Read the Privacy Policy for Hillscape to understand how we collect, use, and safeguard visitor analytics, cookies, and advertising data.">
+    <meta name="robots" content="noindex, follow"> <meta property="og:type" content="website">
+    <meta property="og:title" content="Privacy Policy | Hillscape">
+    <meta property="og:description" content="Transparent information on data tracking, analytics, and privacy practices at Hillscape.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CORE CONFIGURATION (Matching Hillscape Home & About) */
+        :root {
+            --primary: #1e3f20;
+            --primary-light: #2d5a30;
+            --accent: #d4a373;
+            --text-dark: #1a251c;
+            --text-muted: #556256;
+            --text-light: #f4f6f4;
+            --bg-light: #fafbfc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8e2;
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.75;
+        }
+
+        /* ACCESSIBILITY */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--accent);
+            color: var(--primary);
+            padding: 8px;
+            z-index: 1000;
+            transition: top 0.2s;
+        }
+        .skip-link:focus { top: 0; }
+
+        h1, h2, h3 {
+            font-family: var(--font-serif);
+            color: var(--primary);
+            line-height: 1.3;
+        }
+
+        a {
+            color: var(--primary-light);
+            text-decoration: underline;
+            text-decoration-color: var(--accent);
+            text-underline-offset: 4px;
+            transition: var(--transition);
+        }
+
+        a:hover {
+            color: var(--accent);
+            text-decoration-color: var(--primary);
+        }
+
+        /* HEADER */
+        .header {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 0 0 var(--border-color);
+            z-index: 100;
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+
+        .logo::before {
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, transparent 50%, var(--primary) 50%),
+                        linear-gradient(45deg, var(--primary) 50%, transparent 50%);
+            background-size: 50% 100%;
+            background-repeat: no-repeat;
+            background-position: left, right;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        .nav-link:hover {
+            color: var(--accent);
+        }
+
+        /* LEGAL LAYOUT BUILDER */
+        .legal-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem;
+        }
+
+        .legal-header {
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .legal-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-date {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        .policy-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .policy-section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Minor decorative mountain element for legal subheadings */
+        .policy-section h2::before {
+            content: '▲';
+            font-size: 0.7rem;
+            color: var(--accent);
+        }
+
+        .policy-section p {
+            color: #334035;
+            margin-bottom: 1rem;
+        }
+
+        .policy-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #334035;
+        }
+
+        .policy-section li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* CONTACT CARD DESIGN */
+        .contact-box {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            border-radius: 4px;
+            margin-top: 3rem;
+        }
+
+        .contact-box h3 {
+            font-family: var(--font-sans);
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+
+        /* FOOTER */
+        .footer {
+            background: var(--text-dark);
+            color: #a0ada0;
+            padding: 2.5rem 1.5rem;
+            border-top: 4px solid var(--accent);
+            margin-top: 6rem;
+        }
+
+        .footer-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: #a0ada0;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-light);
+        }
+
+        @media (min-width: 600px) {
+            .footer-container {
+                flex-direction: row;
+                justify-content: space-between;
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo" aria-label="Hillscape Home">Hillscape</a>
+            <nav aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about/" class="nav-link">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="legal-wrapper">
+        
+        <header class="legal-header">
+            <h1>Privacy Policy</h1>
+            <p class="meta-date">Effective Date: June 2, 2026</p>
+        </header>
+
+        <section class="policy-section" aria-labelledby="sec-intro">
+            <h2 id="sec-intro">Introduction</h2>
+            <p>Welcome to Hillscape. We value your digital privacy right above all else. This Privacy Policy explains explicitly how Hillscape collects, manages, utilizes, and protects information when you browse and interact with our website.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="sec-collection">
+            <h2 id="sec-collection">Information We Collect</h2>
+            <p><strong>Non-Personal Information:</strong> We may collect anonymous data such as device configuration specs, browser profiles, specific layout pages visited, processing load speeds, and referring resource channels purely for functional tracking and operational website enhancements.</p>
+            <p><strong>Direct Communication Info:</strong> If you choose to contact us directly via email channels, we securely receive your listed name parameters, the return email address framework, and any specific text files or notes you decide to attach to your inbound dynamic message thread.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="sec-cookies">
+            <h2 id="sec-cookies">Cookies and Tracking Technologies</h2>
+            <p>Hillscape utilizes simple standard cookies (small textual identifiers saved directly inside your system memory browser cache) to improve visual rendering consistency, remember structural navigation states, and optimize systemic loading intervals for return visitors.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="sec-analytics">
+            <h2 id="sec-analytics">Google Analytics Data</h2>
+            <p>We use Google Analytics to analyze how web audiences interact with our informational material. Google Analytics may run programmatic processes tracking user paths, total viewing duration, device parameters, system configurations, and approximate generalized geographic locations. This data processing maps performance trends to keep our content practical and accessible.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="sec-advertising">
+            <h2 id="sec-advertising">Google AdSense and Third-Party Advertising</h2>
+            <p>We use Google AdSense alongside third-party vendors to serve relevant visual ad layouts when you view our travel logs. Google maps automated tracking metrics via special operational identifiers (such as the DART cookie matrix) to deliver personalized ads adjusted around your specific digital visits to Hillscape and secondary destinations across the web.</p>
+            <p>You can easily modify your account setups or completely choose to opt out of targeted tracking behaviors by visiting the official <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings portal</a>.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="sec-links">
+            <h2 id="sec-links">Third-Party Links</h2>
+            <p>Our travel logs contain active hyperlinks to external maps, trail databases, and hospitality portals. Please note that Hillscape exerts no operational authority over third-party architectures. We are explicitly not responsible for the privacy preservation systems or editorial conditions deployed on outside sites.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="sec-security">
+            <h2 id="sec-security">Data Security Measures</h2>
+            <p>We configure modern security safeguards across our technical hosting setup to mitigate accidental data loss or extraction. However, please remember that no structural transfer mode over open web fiber channels or storage architecture is entirely bulletproof; we cannot guarantee perfect data containment safety.</p>
+        </section>
+
+        <section class="policy-section" aria-labelledby="sec-changes">
+            <h2 id="sec-changes">Changes to This Policy</h2>
+            <p>We reserve structural parameters to adjust or tweak this documentation layout to correspond with evolving site workflows or regional web governance changes. All modifications go live immediately once published here alongside an edited effective date stamp.</p>
+        </section>
+
+        <section class="contact-box" aria-labelledby="sec-contact">
+            <h3 id="sec-contact">Contact Information</h3>
+            <p>If you have any questions regarding the structural handling of this Privacy Policy layout, please contact our web platform manager at:</p>
+            <p><strong>Email:</strong> <a href="mailto:hillscapetravel@gmail.com">hillscapetravel@gmail.com</a></p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Hillscape. Safe travels, protected data.</p>
+            <nav aria-label="Footer Secondary Links">
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+</html>
