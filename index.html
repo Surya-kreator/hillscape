@@ -4,36 +4,77 @@
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hillscape — Where Mountains Tell Stories</title>
-<meta name="description" content="Hillscape is a premium travel publication exploring the world's most breathtaking highland destinations through immersive storytelling and visual journalism.">
+
+<title>Hillscape | Travel Guides, Hidden Places & Mountain Destinations</title>
+
+<meta name="description" content="Discover hidden places, travel guides, itineraries, weather insights, resorts, and unforgettable mountain destinations. Hillscape helps travelers explore the world's most beautiful hill stations.">
+
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="author" content="Hillscape">
+
+<link rel="canonical" href="https://hillscape.pages.dev/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hillscape | Travel Guides, Hidden Places & Mountain Destinations">
+<meta property="og:description" content="Explore hill stations, hidden places, travel guides, weather insights, and unforgettable mountain experiences.">
+<meta property="og:url" content="https://hillscape.pages.dev/">
+<meta property="og:site_name" content="Hillscape">
+<meta property="og:image" content="https://hillscape.pages.dev/assets/images/logo/logo.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hillscape | Travel Guides, Hidden Places & Mountain Destinations">
+<meta name="twitter:description" content="Explore hill stations, hidden places, travel guides, weather insights, and unforgettable mountain experiences.">
+<meta name="twitter:image" content="https://hillscape.pages.dev/assets/images/logo/logo.png">
+
+<!-- Schema -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"Hillscape",
-  "url":"https://hllscape.netlify.app",
-  "logo":"https://hillscape.netlify.app/assets/images/logo/logo.png"
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Hillscape",
+  "url": "https://hillscape.pages.dev",
+  "logo": "https://hillscape.pages.dev/assets/images/logo/logo.png"
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Hillscape",
+  "url": "https://hillscape.pages.dev",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://hillscape.pages.dev/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap" rel="stylesheet">
 
-<link rel="icon" href="assets/images/logo/favicon.ico">
+<!-- Favicons -->
+<link rel="icon" href="/assets/images/logo/favicon.ico">
 
 <link rel="icon"
       type="image/png"
       sizes="32x32"
-      href="assets/images/logo/favicon-32x32.png">
+      href="/assets/images/logo/favicon-32x32.png">
 
 <link rel="icon"
       type="image/png"
       sizes="16x16"
-      href="assets/images/logo/favicon-16x16.png">
+      href="/assets/images/logo/favicon-16x16.png">
 
 <link rel="apple-touch-icon"
       sizes="180x180"
-      href="assets/images/logo/apple-touch-icon.png">
+      href="/assets/images/logo/apple-touch-icon.png">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -744,6 +785,98 @@
   display:block;
 }
 
+.featured-guides {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 24px;
+}
+
+.featured-guides h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 35px;
+  color: #111827;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.featured-guides h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0f766e, #16a34a);
+}
+
+.featured-guides a {
+  display: block;
+  text-decoration: none;
+  color: #111827;
+  font-size: 1.08rem;
+  font-weight: 600;
+  line-height: 1.6;
+  padding: 20px 24px;
+  margin-bottom: 14px;
+
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease,
+    border-color .3s ease,
+    background .3s ease;
+
+  box-shadow: 0 2px 8px rgba(0,0,0,.04);
+}
+
+.featured-guides a:hover {
+  transform: translateY(-4px);
+  border-color: #16a34a;
+  background: linear-gradient(
+    135deg,
+    rgba(22,163,74,.04),
+    rgba(15,118,110,.04)
+  );
+  box-shadow: 0 14px 32px rgba(0,0,0,.10);
+}
+
+.featured-guides a::after {
+  content: "→";
+  float: right;
+  font-size: 1.2rem;
+  opacity: .6;
+  transition: transform .3s ease;
+}
+
+.featured-guides a:hover::after {
+  transform: translateX(6px);
+  opacity: 1;
+}
+
+.featured-guides br {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .featured-guides {
+    margin: 60px auto;
+    padding: 0 18px;
+  }
+
+  .featured-guides h2 {
+    font-size: 2rem;
+  }
+
+  .featured-guides a {
+    padding: 18px;
+    font-size: 1rem;
+  }
+}
   /* ============ MOBILE ============ */
   .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
   .hamburger span { display: block; width: 24px; height: 1.5px; background: white; transition: all 0.3s; }
@@ -1265,6 +1398,23 @@
     </div>
   </div>
 </section>
+
+
+
+
+
+
+<section id="all-guides" class="featured-guides">
+  <h2>Kodaikanal Guides</h2>
+  <a href="/kodaikanal/guides/hidden-places-kodaikanal/">➜ Hidden Places in Kodaikanal</a><br>
+<a href="/kodaikanal/guides/kodaikanal-boating-guide/">➜ Kodaikanal Lake Boating Guide</a><br>
+<a href="/kodaikanal/guides/best-sunrise-spots/">➜ Best Sunrise Spots in Kodaikanal</a><br>
+<a href="/kodaikanal/guides/valley-view-resorts/">➜ Resorts with Valley View in Kodaikanal</a><br>
+<a href="/kodaikanal/guides/two-day-itinerary/">➜ Two-Day Kodaikanal Itinerary</a><br>
+<a href="/kodaikanal/guides/kodaikanal-weather/">➜ Kodaikanal Weather Month by Month</a><br>
+<a href="/kodaikanal/guides/family-resorts/">➜ Best Family Resorts in Kodaikanal</a>
+</section>
+
 <!-- ============ NEWSLETTER ============ -->
 <section class="section newsletter">
   <div class="section-inner">
@@ -1285,6 +1435,8 @@
     </div>
   </div>
 </section>
+
+
 
 <!-- ============ FOOTER ============ -->
 <footer>
