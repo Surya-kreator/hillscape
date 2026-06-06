@@ -80,8 +80,7 @@ folders.forEach(folder => {
     )
     .join("<br>\n");
 
-  const section = `
-<section id="related-links">
+  const section = `<section id="related-links">
   <h2>Related Articles</h2>
   ${relatedLinks}
 </section>`;
@@ -108,8 +107,7 @@ if (fs.existsSync(homeFile)) {
     )
     .join("<br>\n");
 
-  const homepageSection = `
-<section id="all-guides" class="featured-guides">
+  const homepageSection = `<section id="all-guides" class="featured-guides">
   <h2>Kodaikanal Guides</h2>
   ${allLinks}
 </section>`;
