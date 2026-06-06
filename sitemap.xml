@@ -2,98 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://hillscape.netlify.app/</loc>
+    <loc>https://hillscape.pages.dev/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/about/</loc>
+    <loc>https://hillscape.pages.dev/about/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/contact/</loc>
+    <loc>https://hillscape.pages.dev/contact/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/privacy-policy/</loc>
+    <loc>https://hillscape.pages.dev/privacy-policy/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/stories/coorg-story/</loc>
+    <loc>https://hillscape.pages.dev/stories/coorg-story/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/stories/kodaikanal-story/</loc>
+    <loc>https://hillscape.pages.dev/stories/kodaikanal-story/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/stories/ooty-story/</loc>
+    <loc>https://hillscape.pages.dev/stories/ooty-story/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/stories/wayanad-story/</loc>
+    <loc>https://hillscape.pages.dev/stories/wayanad-story/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/kodaikanal/guides/best-sunrise-spots/</loc>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/best-sunrise-spots/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/kodaikanal/guides/kodaikanal-boating-guide/</loc>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/kodaikanal-boating-guide/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/kodaikanal/guides/two-day-itinerary/</loc>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/two-day-itinerary/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/kodaikanal/guides/valley-view-resorts/</loc>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/valley-view-resorts/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/kodaikanal/guides/hidden-places-kodaikanal/</loc>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/hidden-places-kodaikanal/</loc>
     <lastmod>2026-06-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://hillscape.netlify.app/kodaikanal/guides/kodaikanal-weather/</loc>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/kodaikanal-weather/</loc>
+    <lastmod>2026-06-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/family-resorts/</loc>
     <lastmod>2026-06-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
