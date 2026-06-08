@@ -607,7 +607,9 @@
       font-size: 0.77rem; letter-spacing: 0.05em;
     }
 
-    
+    .gap{
+  height:20px;
+    }
 
 
     @media (max-width: 600px) {
