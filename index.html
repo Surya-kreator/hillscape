@@ -152,6 +152,7 @@
     display: flex; align-items: center; gap: 36px;
     list-style: none;
   }
+  .nav-links.active { display: flex; }
   .nav-links a {
     font-family: var(--font-body);
     font-size: 0.8rem;
@@ -881,6 +882,18 @@
   .hamburger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
   .hamburger span { display: block; width: 24px; height: 1.5px; background: white; transition: all 0.3s; }
 
+  .hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
   @media (max-width: 1100px) {
     .nav-links, .nav-cta { display: none; }
     .hamburger { display: flex; }
@@ -896,6 +909,31 @@
   }
 
   @media (max-width: 768px) {
+    .hamburger {
+  position: relative;
+  z-index: 1001;
+}
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 5rem 2rem;
+
+    background: #111;
+    transition: right 0.3s ease;
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
     .section { padding: 72px 0; }
     .section-inner { padding: 0 24px; }
     nav { padding: 16px 24px; }
@@ -977,10 +1015,10 @@
       </a> -->
     </div>
   </div>
-  <div class="scroll-indicator">
+  <!-- <div class="scroll-indicator">
     <span>Scroll</span>
     <div class="scroll-line"></div>
-  </div>
+  </div> -->
 </section>
 
 <!-- ============ TICKER ============ -->
@@ -1514,6 +1552,19 @@
   window.addEventListener('scroll', () => {
     nav.classList.toggle('scrolled', window.scrollY > 60);
   });
+
+ 
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links'); // your menu container
+
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  navLinks.classList.toggle('active');
+});
 
   // Scroll reveal
   const reveals = document.querySelectorAll('.reveal');
