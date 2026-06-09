@@ -5,20 +5,20 @@
     "headline": "Best Sunrise Spots in Kodaikanal — 5 Viewpoints Ranked for 2026",
     "description": "A complete guide to the 5 best sunrise spots in Kodaikanal including Dolphin's Nose, Perumal Peak, Poombarai Village, Green Valley View, and Coaker's Walk, with timings, difficulty levels, entry fees, and photography tips.",
     "image": [
-      "https://www.hillscape.netlify.app/best-sunrise-spots/images/green-valley-sunrise.jpg",
-      "https://www.hillscape.netlify.app/images/dolphin-nose-sunrise.jpg"
+      "https://hillscape.pages.dev/best-sunrise-spots/images/green-valley-sunrise.jpg",
+      "https://hillscape.pages.dev/images/dolphin-nose-sunrise.jpg"
     ],
     "author": {
       "@type": "Organization",
       "name": "Kodaikanal Sunrise Guide",
-      "url": "https://www.hillscape.netlify.app"
+      "url": "https://hillscape.pages.dev"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Kodaikanal Sunrise Guide",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://www.hillscape.netlify.app/logo.png",
+        "url": "https://hillscape.pages.dev/logo.png",
         "width": 200,
         "height": 60
       }
@@ -27,7 +27,7 @@
     "dateModified": "2026-06-01T06:00:00+05:30",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://www.hillscape.netlify.app/guides/best-sunrise-spots"
+      "@id": "https://hillscape.pages.dev/guides/best-sunrise-spots"
     },
     "keywords": ["best sunrise spots in Kodaikanal", "Kodaikanal sunrise viewpoints", "Dolphin's Nose sunrise", "Perumal Peak trek", "Coaker's Walk sunrise", "Kodaikanal travel guide"],
     "articleSection": "Travel",

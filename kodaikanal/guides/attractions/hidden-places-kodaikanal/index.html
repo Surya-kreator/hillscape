@@ -149,40 +149,38 @@
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "Hidden Places in Kodaikanal: 7 Secret Spots Most Tourists Miss",
-  "description": "Discover 7 hidden places in Kodaikanal including Poombarai Village, Mannavanur Lake, Berijam Lake, Fairy Falls, Pambar Shola, and other lesser-known attractions away from the crowds.",
-  "image": "https://hillscape.pages.dev/kodaikanal/guides/hidden-places-in-kodaikanal/images/poombarai-village.jpg",
+  "description": "Discover 7 hidden places in Kodaikanal including Poombarai Village, Mannavanur Lake, Berijam Lake, Fairy Falls, Pambar Shola, Kukkal Caves, and other lesser-known attractions away from the tourist crowds.",
   "author": {
     "@type": "Organization",
     "name": "Hillscape"
   },
   "publisher": {
     "@type": "Organization",
-    "name": "Hillscape",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://hillscape.pages.dev/logo.png"
-    }
+    "name": "Hillscape"
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": "https://hillscape.pages.dev/kodaikanal/guides/attractions/hidden-places-in-kodaikanal/"
   },
   "datePublished": "2026-06-06",
-  "dateModified": "2026-06-06",
+  "dateModified": "2026-06-09",
   "inLanguage": "en",
-  "articleSection": "Travel Guide",
+  "articleSection": "Attractions",
   "keywords": [
     "Hidden Places in Kodaikanal",
     "Secret Places in Kodaikanal",
-    "Offbeat Kodaikanal",
-    "Kodaikanal Travel Guide",
+    "Offbeat Places in Kodaikanal",
     "Poombarai Village",
     "Mannavanur Lake",
     "Berijam Lake",
+    "Fairy Falls",
+    "Pambar Shola",
+    "Kukkal Caves",
     "Kodaikanal Attractions"
   ]
 }
 </script>
+
 
 
 
@@ -562,6 +560,45 @@
       display: flex; align-items: center; gap: 0.35rem;
     }
     .chip strong { color: var(--moss); font-weight: 500; }
+
+    .hotel-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin:20px 0;
+}
+
+.hotel-gallery img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:12px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.hotel-gallery img:hover {
+  transform: scale(1.03);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 99999;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+
 
     /* Why visit box */
     .why-box {
@@ -997,6 +1034,30 @@
       </div>
     </div>
 
+    <div class="hotel-gallery">
+  <img src="images/Mannavanur-Lake-view-kodaikanal.jpg"
+       alt="Mannavanur lake view in Kodaikanal with hills and meadows"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+      
+  <img src="./images/Mannavanur_Lake_in_2024-11-09.jpg"
+       alt="Mannavanur Lake at dawn, Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+
+  <img src="images/Mannavanur-Lake-view-kodaikanal.jpg"
+       alt="Mannavanur lake view with green meadows and hills in the background, Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">  
+</div>
+
+
     <div class="place-chips">
       <div class="chip">📍 <strong>28 km from Kodai town</strong></div>
       <div class="chip">⏱️ <strong>2–3 hours</strong></div>
@@ -1046,6 +1107,30 @@
         <p class="place-tagline">A forest reservoir at the end of a wildlife corridor</p>
       </div>
     </div>
+
+    <div class="hotel-gallery">
+  <img src="images/Berijam_Lake_Boathouse.jpg"
+       alt="Berijam Lake boathouse surrounded by shola forest, Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+      
+  <img src="./images/BERIJAM_LAKE.jpg"
+       alt="Berijam Lake surrounded by forest, Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+
+  <img src="images/Berijam_Lake_View.jpg"
+       alt="Panoramic view of Berijam Lake, Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">  
+</div>
+
 
     <div class="place-chips">
       <div class="chip">📍 <strong>21 km from Kodai town</strong></div>
@@ -1097,6 +1182,24 @@
       </div>
     </div>
 
+    <div class="hotel-gallery">
+  <img src="images/Fairy_Falls-view-kodaikanal.jpg"
+       alt="Fairy Falls cascading through mossy rocks in Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+      
+  <img src="./images/Fairy_falls_kodaikanal.jpg"
+       alt="Fairy Falls surrounded by eucalyptus trees in Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+  
+</div>
+
+
     <div class="place-chips">
       <div class="chip">📍 <strong>5 km from Kodai town</strong></div>
       <div class="chip">⏱️ <strong>1.5–2 hours</strong></div>
@@ -1146,6 +1249,7 @@
         <p class="place-tagline">Iron Age burial chambers in a remote grassland</p>
       </div>
     </div>
+
 
     <div class="place-chips">
       <div class="chip">📍 <strong>35 km from Kodai town</strong></div>
@@ -1247,6 +1351,30 @@
       </div>
     </div>
 
+        <div class="hotel-gallery">
+  <img src="../best-sunrise-spots/images/poomparai-sunrise.jpg"
+       alt="Sunrise over the terraced garlic farms of Poombarai Village, Kodaikanal — an offbeat sunrise viewpoint"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+      
+  <img src="../best-sunrise-spots/images/poomparai-kodaikanal.jpg"
+       alt="Golden morning light on the stepped terrace farms of Poombarai Village near Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+
+  <img src="../best-sunrise-spots/images/poomparai-view.jpg"
+       alt="Valley view from Poombarai Village at sunrise, Kookal Road, Kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">  
+</div>
+
+  
     <div class="place-chips">
       <div class="chip">📍 <strong>18 km from Kodai town</strong></div>
       <div class="chip">⏱️ <strong>2–3 hours</strong></div>
@@ -1654,6 +1782,16 @@
 </footer>
 
 <script>
+
+ function openImage(src) {
+  document.getElementById("lightbox").style.display = "flex";
+  document.getElementById("lightbox-img").src = src;
+}
+
+function closeImage() {
+  document.getElementById("lightbox").style.display = "none";
+}
+
   function toggleFaq(el) {
     const wasOpen = el.classList.contains('open');
     document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
@@ -1678,6 +1816,12 @@
     observer.observe(el);
   });
 </script>
-
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+  <img
+    id="lightbox-img"
+    src=""
+    alt=""
+    onclick="event.stopPropagation()">
+</div>
 </body>
 </html>
