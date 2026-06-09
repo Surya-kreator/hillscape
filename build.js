@@ -70,7 +70,7 @@ articles.forEach(article => {
     )
     .join("<br>\n");
 
-  const section = `<section id="related-links">
+  const section = `<section id="related-links" class="related-links">
 <h2>Related Articles</h2>
 ${relatedLinks}
 </section>`;
