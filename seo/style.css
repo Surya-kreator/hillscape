@@ -642,9 +642,106 @@
   height:20px;
     }
 
+    /* ══ ROUTE STRIP ══ */
+.route-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 2rem 0;
+  padding-left: 0.5rem;
+}
 
+.route-node {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+
+.route-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--sage);
+  border: 2px solid var(--moss);
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* Start node — solid moss */
+.route-node.start .route-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--moss-dark);
+  border-color: var(--moss-dark);
+  box-shadow: 0 0 0 4px rgba(45, 74, 48, 0.18);
+}
+
+/* End node — solid charcoal */
+.route-node.end .route-dot {
+  width: 20px;
+  height: 20px;
+  background: var(--charcoal);
+  border-color: var(--charcoal);
+  box-shadow: 0 0 0 4px rgba(43, 43, 43, 0.15);
+}
+
+/* Food stop — amber accent */
+.route-dot.food {
+  background: var(--amber);
+  border-color: var(--rust);
+  box-shadow: 0 0 0 3px rgba(200, 146, 58, 0.2);
+}
+
+/* Mid / landmark — gold accent */
+.route-dot.mid {
+  background: var(--gold);
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px rgba(212, 169, 74, 0.2);
+}
+
+.route-label {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--text);
+  padding-bottom: 0.1rem;
+}
+
+.route-label strong {
+  font-weight: 500;
+  color: var(--moss-dark);
+}
+
+.route-label span {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Vertical connector line between nodes */
+.route-line {
+  width: 2px;
+  min-height: 36px;
+  background: linear-gradient(to bottom, var(--mist), var(--sage));
+  margin-left: calc(0.5rem + 7px); /* aligns with dot centre: padding-left + (dot-width/2 - line-width/2) */
+  flex-shrink: 0;
+}
+
+/* Mobile */
     @media (max-width: 600px) {
       .hero-content { padding: 0 5vw 6vh; }
       .spot-num { font-size: 4rem; }
       section, .spot-section { padding: 3.5rem 0; }
+      .route-strip {
+    padding-left: 0.25rem;
+  }
+
+  .route-label {
+    font-size: 0.85rem;
+  }
+
+  .route-label span {
+    font-size: 0.75rem;
+  }
     }
