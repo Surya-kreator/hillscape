@@ -71,8 +71,10 @@ articles.forEach(article => {
     .join("<br>\n");
 
   const section = `<section id="related-links" class="related-links">
+<div class="container">
 <h2>Related Articles</h2>
 ${relatedLinks}
+</div>
 </section>`;
 
   html = html.replace(
