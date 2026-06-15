@@ -125,3 +125,109 @@
   ]
 }
 </script>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://hillscape.pages.dev/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/about/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/contact/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/privacy-policy/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/stories/coorg-story/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/stories/kodaikanal-story/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/stories/ooty-story/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/stories/wayanad-story/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/attractions/best-sunrise-spots/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/attractions/kodaikanal-boating-guide/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/itineraries/two-day-itinerary/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/travel-tips/valley-view-resorts/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/attractions/hidden-places-kodaikanal/</loc>
+    <lastmod>2026-06-04</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/seasonal-guides/kodaikanal-weather/</loc>
+    <lastmod>2026-06-05</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/travel-tips/family-resorts/</loc>
+    <lastmod>2026-06-06</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/travel-tips/best-cafes-kodaikanal-mountain-view/</loc>
+    <lastmod>2026-06-07</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/travel-tips/pet-friendly-kodaikanal-resorts/</loc>
+    <lastmod>2026-06-08</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/travel-tips/bangalore-to-kodaikanal-road-trip/</loc>
+    <lastmod>2026-06-09</lastmod>
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/travel-tips/breakfast-for-bangalore-to-kodaikanal/</loc>
+    <lastmod>2026-06-10</lastmod> 
+  </url>
+
+  <url>
+    <loc>https://hillscape.pages.dev/kodaikanal/guides/travel-tips/Where-to-stay-kodaikanal-stays/</loc>
+    <lastmod>2026-06-15</lastmod>
+  </url>
+
+
+</urlset>
