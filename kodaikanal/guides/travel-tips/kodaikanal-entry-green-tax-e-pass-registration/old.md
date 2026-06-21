@@ -272,7 +272,7 @@
       <span class="hero-pill">⚡ EV Priority Access</span>
     </div>
   </div>
-  <span class="scroll-hint">Scroll to explore</span>
+   
 </section>
 
 <!-- ══ STICKY NAV ══ -->
