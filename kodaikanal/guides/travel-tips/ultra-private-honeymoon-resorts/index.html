@@ -210,6 +210,44 @@
   </div>
 </nav>
 
+  <section class="container">
+    <div class="gap"></div>
+  <!-- ===================== Kodaikanal Weather Widget ===================== -->
+<section id="kdk-weather" class="kdk-weather" itemscope itemtype="https://schema.org/WeatherForecast" aria-label="Current weather conditions in Kodaikanal">
+  <header class="kdk-w-header">
+    <h3 class="kdk-w-title" itemprop="name">Current Conditions in Kodaikanal</h3>
+    <button type="button" id="kdk-refresh" class="kdk-w-refresh" aria-label="Refresh weather data">⟳ Refresh</button>
+  </header>
+
+  <div class="kdk-w-grid">
+    <ul class="kdk-w-col">
+      <li class="kdk-w-item kdk-w-main"><span aria-hidden="true">🌡️</span> <span id="kdk-temp" itemprop="temperature">--°C</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌫️</span> <span id="kdk-mist">--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">💧</span> Humidity: <span id="kdk-humidity">--%</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌦️</span> Rain Next 3h: <span id="kdk-rain">--%</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌄</span> Sunrise: <span id="kdk-sunrise">--:--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌅</span> Sunset: <span id="kdk-sunset">--:--</span></li>
+      
+    </ul>
+
+    <ul class="kdk-w-col">
+      <li class="kdk-w-item"><span aria-hidden="true">🌅</span> Sunset Visibility: <span id="kdk-sunsetvis">--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">📸</span> Photography: <span id="kdk-photo">--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🥾</span> Trekking: <span id="kdk-trek">--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🧥</span> <span id="kdk-clothing">--</span></li>
+    </ul>
+  </div>
+
+  <p class="kdk-w-updated">
+    🕒 Updated <span id="kdk-mins-ago">--</span> minutes ago
+    (<time id="kdk-updated-time" datetime="">--</time>)
+  </p>
+</section>
+<!-- =================== /Kodaikanal Weather Widget =================== -->
+<div class="gap"></div>
+</section>
+
+
 <!-- ══ INTRO + AUTHOR ══ -->
 <section id="intro">
   <div class="container">

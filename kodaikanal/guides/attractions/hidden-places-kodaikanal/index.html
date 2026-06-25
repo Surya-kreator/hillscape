@@ -908,6 +908,224 @@
   </div>
 </nav>
 
+  <section class="container">
+    <div class="gap"></div>
+  <!-- ===================== Kodaikanal Weather Widget ===================== -->
+<section id="kdk-weather" class="kdk-weather" itemscope itemtype="https://schema.org/WeatherForecast" aria-label="Current weather conditions in Kodaikanal">
+  <header class="kdk-w-header">
+    <h3 class="kdk-w-title" itemprop="name">Current Conditions in Kodaikanal</h3>
+    <button type="button" id="kdk-refresh" class="kdk-w-refresh" aria-label="Refresh weather data">⟳ Refresh</button>
+  </header>
+
+  <div class="kdk-w-grid">
+    <ul class="kdk-w-col">
+      <li class="kdk-w-item kdk-w-main"><span aria-hidden="true">🌡️</span> <span id="kdk-temp" itemprop="temperature">--°C</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌫️</span> <span id="kdk-mist">--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">💧</span> Humidity: <span id="kdk-humidity">--%</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌦️</span> Rain Next 3h: <span id="kdk-rain">--%</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌅</span> Sunset: <span id="kdk-sunset">--:--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌄</span> Sunrise: <span id="kdk-sunrise">--:--</span></li>
+    </ul>
+
+    <ul class="kdk-w-col">
+      <li class="kdk-w-item"><span aria-hidden="true">📸</span> Photography: <span id="kdk-photo">--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🌅</span> Sunset Visibility: <span id="kdk-sunsetvis">--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🥾</span> Trekking: <span id="kdk-trek">--</span></li>
+      <li class="kdk-w-item"><span aria-hidden="true">🧥</span> <span id="kdk-clothing">--</span></li>
+    </ul>
+  </div>
+
+  <p class="kdk-w-updated">
+    🕒 Updated <span id="kdk-mins-ago">--</span> minutes ago
+    (<time id="kdk-updated-time" datetime="">--</time>)
+  </p>
+</section>
+
+<style>
+.kdk-weather{
+  font-family:inherit;
+  font-size:0.82rem;
+  line-height:1.5;
+  max-width:480px;
+  padding:10px 14px;
+  border:1px solid #dde3ea;
+  border-radius:10px;
+  background:#f8fafc;
+  color:#1f2937;
+}
+.kdk-w-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:6px;
+}
+.kdk-w-title{
+  font-size:0.85rem;
+  font-weight:700;
+  margin:0;
+  color:#0f172a;
+}
+.kdk-w-refresh{
+  font-size:0.7rem;
+  font-weight:600;
+  padding:3px 8px;
+  border:1px solid #cbd5e1;
+  border-radius:6px;
+  background:#fff;
+  color:#334155;
+  cursor:pointer;
+  line-height:1.4;
+  transition:background 0.15s;
+}
+.kdk-w-refresh:hover{background:#eef2f7;}
+.kdk-w-refresh:active{transform:scale(0.97);}
+.kdk-w-refresh.kdk-spin{animation:kdk-spin 0.6s linear;}
+@keyframes kdk-spin{
+  0%{transform:rotate(0deg);}
+  100%{transform:rotate(360deg);}
+}
+
+.kdk-w-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4px 16px;
+}
+.kdk-w-col{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  flex-direction:column;
+  gap:4px;
+}
+.kdk-w-item{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.kdk-w-main{font-weight:700;font-size:0.95rem;}
+
+.kdk-w-updated{
+  margin:8px 0 0;
+  font-size:0.72rem;
+  color:#6b7280;
+}
+
+@media (max-width:360px){
+  .kdk-w-grid{grid-template-columns:1fr;}
+}
+</style>
+
+<script>
+(function(){
+  var LAT=10.2381, LON=77.4892, TZ="Asia/Kolkata";
+
+  function fmtTime(iso){
+    return new Date(iso).toLocaleTimeString('en-IN',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:TZ});
+  }
+
+  function mistLevel(humidity, visibilityM, code){
+    if(code===45||code===48||visibilityM<1000) return "Dense Fog";
+    if(humidity>=90||visibilityM<3000) return "Misty";
+    if(humidity>=75) return "Light Haze";
+    return "Clear";
+  }
+
+  function photographyConditions(cloud, rainProb, visibilityM){
+    if(rainProb>60||visibilityM<1000) return "Poor";
+    if(cloud<30&&visibilityM>8000) return "Excellent";
+    if(cloud<70) return "Good";
+    return "Fair";
+  }
+
+  function sunsetVisibility(cloud, visibilityM){
+    if(visibilityM<2000) return "Obstructed";
+    if(cloud<30) return "Excellent";
+    if(cloud<60) return "Good";
+    return "Limited";
+  }
+
+  function trekkingConditions(rainProb, windKmh, temp){
+    if(rainProb>60) return "Not Recommended";
+    if(windKmh>30) return "Caution (Windy)";
+    if(rainProb>30) return "Fair";
+    return "Good";
+  }
+
+  function clothingRecommendation(temp){
+    if(temp<12) return "Heavy Jacket Advised";
+    if(temp<18) return "Light Jacket Advised";
+    if(temp<24) return "Light Layers Recommended";
+    return "Light Clothing Suitable";
+  }
+
+  function render(d){
+    var cur=d.current;
+    var temp=Math.round(cur.temperature_2m);
+    var humidity=cur.relative_humidity_2m;
+    var cloud=cur.cloud_cover;
+    var windKmh=cur.wind_speed_10m;
+    var visibilityM=(d.hourly.visibility&&d.hourly.visibility[0]!=null)?d.hourly.visibility[0]:10000;
+    var rainProb=Math.max.apply(null,d.hourly.precipitation_probability.slice(0,3));
+
+    document.getElementById('kdk-temp').textContent=temp+"°C";
+    document.getElementById('kdk-mist').textContent=mistLevel(humidity,visibilityM,cur.weather_code);
+    document.getElementById('kdk-humidity').textContent=humidity+"%";
+    document.getElementById('kdk-rain').textContent=rainProb+"%";
+    document.getElementById('kdk-sunset').textContent=fmtTime(d.daily.sunset[0]);
+    document.getElementById('kdk-sunrise').textContent=fmtTime(d.daily.sunrise[0]);
+    document.getElementById('kdk-photo').textContent=photographyConditions(cloud,rainProb,visibilityM);
+    document.getElementById('kdk-sunsetvis').textContent=sunsetVisibility(cloud,visibilityM);
+    document.getElementById('kdk-trek').textContent=trekkingConditions(rainProb,windKmh,temp);
+    document.getElementById('kdk-clothing').textContent=clothingRecommendation(temp);
+
+    var now=new Date();
+    document.getElementById('kdk-mins-ago').textContent="0";
+    document.getElementById('kdk-updated-time').textContent=now.toLocaleTimeString('en-IN',{hour:'numeric',minute:'2-digit',hour12:true,timeZone:TZ});
+    document.getElementById('kdk-updated-time').setAttribute('datetime',now.toISOString());
+    window.kdkLastUpdate=now;
+  }
+
+  function tickMinutesAgo(){
+    if(!window.kdkLastUpdate) return;
+    var mins=Math.floor((Date.now()-window.kdkLastUpdate.getTime())/60000);
+    var el=document.getElementById('kdk-mins-ago');
+    if(el) el.textContent=mins;
+  }
+
+  function load(){
+    var url="https://api.open-meteo.com/v1/forecast?latitude="+LAT+"&longitude="+LON+
+      "&current=temperature_2m,relative_humidity_2m,cloud_cover,wind_speed_10m,weather_code"+
+      "&hourly=precipitation_probability,visibility"+
+      "&daily=sunrise,sunset"+
+      "&timezone="+encodeURIComponent(TZ)+"&forecast_days=1";
+
+    return fetch(url).then(function(r){return r.json();}).then(render).catch(function(e){
+      console.error("Kodaikanal weather widget error:",e);
+    });
+  }
+
+  // Refresh button with spin animation + debounce while loading
+  var refreshBtn=document.getElementById('kdk-refresh');
+  var isLoading=false;
+  refreshBtn.addEventListener('click', function(){
+    if(isLoading) return;
+    isLoading=true;
+    refreshBtn.classList.add('kdk-spin');
+    refreshBtn.disabled=true;
+    load().finally(function(){
+      isLoading=false;
+      refreshBtn.classList.remove('kdk-spin');
+      refreshBtn.disabled=false;
+    });
+  });
+
+  load();
+  setInterval(load, 5*60*1000);      // auto-refresh every 5 minutes
+  setInterval(tickMinutesAgo, 60*1000);
+})();
+</script>
+<!-- =================== /Kodaikanal Weather Widget =================== -->
+<div class="gap"></div>
+</section>
+
+
 <!-- ── INTRODUCTION ── -->
 <div class="container">
   <section id="intro">
