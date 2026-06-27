@@ -111,6 +111,11 @@
   ]
 }
 </script>
+<style>
+    section[id^="activity-"] {
+  scroll-margin-top: 140px; /* Adjust based on your sticky header + nav */
+}
+</style>
 </head>
 
 <body>
@@ -276,6 +281,24 @@
   <p>Fifteen experiences that consistently work well for couples, ordered roughly from the most essential to the more offbeat additions worth fitting in if time allows.</p>
 <div class="gap"></div>
 </section>
+
+<nav class="items-nav">
+  <a href="#activity-1">Boating</a>
+  <a href="#activity-2">Sunset View</a>
+  <a href="#activity-3">Coaker's Walk</a>
+  <a href="#activity-4">Dolphin's Nose</a>
+  <a href="#activity-5">Pine Forest</a>
+  <a href="#activity-6">Bryant Park</a>
+  <a href="#activity-7">Mannavanur</a>
+  <a href="#activity-8">Poombarai</a>
+  <a href="#activity-9">Pillar Rocks</a>
+  <a href="#activity-10">Café Hopping</a>
+  <a href="#activity-11">Couple Spa</a>
+  <a href="#activity-12">Horse Riding</a>
+  <a href="#activity-13">Camping</a>
+  <a href="#activity-14">Stargazing</a>
+  <a href="#activity-15">Cycling</a>
+</nav>
 
 <!-- 1 -->
 <section id="activity-1" class="spot-section container">
@@ -552,7 +575,7 @@
     </div>
   </div>
         <div class="hotel-gallery">
-  <img src="images/Mannavanur-Lake-view-kodaikanal.jpg"
+   <img src="/images/Mannavanur-Lake-view-kodaikanal.jpg"
        alt="Mannavanur lake view in Kodaikanal with hills and meadows"
        width="600" height="220"
        loading="lazy"
@@ -566,7 +589,7 @@
        decoding="async"
        onclick="openImage(this.src)">
 
-  <img src="images/Upper-Mannavanur-Lake.jpg"
+   <img src="/images/Upper-Mannavanur-Lake.jpg"
        alt="Mannavanur lake view with green meadows and hills in the background, Kodaikanal"
        width="600" height="220"
        loading="lazy"
@@ -602,7 +625,7 @@
   </div>
 
    <div class="hotel-gallery">
-  <img src="images/poomparai-sunrise.jpg"
+   <img src="/images/poomparai-sunrise.jpg"
        alt="Sunrise over the terraced garlic farms of Poombarai Village, Kodaikanal — an offbeat sunrise viewpoint"
        width="600" height="220"
        loading="lazy"
@@ -616,7 +639,7 @@
        decoding="async"
        onclick="openImage(this.src)">
 
-  <img src="images/poomparai-view.jpg"
+   <img src="/images/poomparai-view.jpg"
        alt="Valley view from Poombarai Village at sunrise, Kookal Road, Kodaikanal"
        width="600" height="220"
        loading="lazy"
@@ -652,7 +675,7 @@
   </div>
 
   <div class="hotel-gallery">
-  <img src="images/pillar-rocks-valley-view.jpg"
+   <img src="/images/pillar-rocks-valley-view.jpg"
        alt="Pillar rocks with sunset view, kodaikanal"
        width="600" height="220"
        loading="lazy"
@@ -666,7 +689,7 @@
        decoding="async"
        onclick="openImage(this.src)">
 
-  <img src="images/pillar-rocks-full-view.jpg"
+   <img src="/images/pillar-rocks-full-view.jpg"
        alt="Full valley view of pillar rocks, kodaikanal sunset"
        width="600" height="220"
        loading="lazy"
@@ -695,7 +718,7 @@
     <span class="spot-num">10</span>
     <div class="spot-title-block">
       <span class="spot-badge badge-easy">Leisure</span>
-      <h2>Café Hopping</h2>
+      <h2>Café Hopping(Many Cafes)</h2>
       <p class="spot-tagline">Slow mornings over coffee and bakery treats</p>
     </div>
   </div>
@@ -721,7 +744,7 @@
     <span class="spot-num">11</span>
     <div class="spot-title-block">
       <span class="spot-badge badge-easy">Relaxation</span>
-      <h2>Couple Spa</h2>
+      <h2>Couple Spa(Many Spa's)</h2>
       <p class="spot-tagline">A slow, restorative afternoon at the resort</p>
     </div>
   </div>
@@ -777,6 +800,16 @@
       <p class="spot-tagline">A night under the stars away from town</p>
     </div>
   </div>
+  
+   <div class="hotel-gallery">
+  <img src="/images/camping-in-kodaikanal.jpg"
+       alt="Campng in kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+</div>
+
   <div class="why-box">
     <span class="why-icon">⛺</span>
     <div class="why-text">
@@ -803,6 +836,16 @@
       <p class="spot-tagline">Clear hill-station skies away from city light</p>
     </div>
   </div>
+  
+   <div class="hotel-gallery">
+  <img src="/images/evening-sky-in-kodaikanal.jpg"
+       alt="Stargazing in kodaikanal"
+       width="600" height="220"
+       loading="lazy"
+       decoding="async"
+       onclick="openImage(this.src)">
+</div>
+  
   <div class="why-box">
     <span class="why-icon">🌌</span>
     <div class="why-text">
@@ -962,31 +1005,50 @@
   <p class="section-tag">Common Questions</p>
   <h2>Frequently Asked Questions</h2>
   <div class="faq-list">
-    <div class="faq-item">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q"><h3>How many days are ideal for a Kodaikanal honeymoon?</h3><span class="faq-toggle">+</span></div>
       <p class="faq-a">Two to three days work well for most couples — enough time to cover the lake, the main viewpoints and at least one day trip, without feeling rushed.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q"><h3>What is the best time of year for a romantic trip to Kodaikanal?</h3><span class="faq-toggle">+</span></div>
       <p class="faq-a">Winter, from October to February, is often considered the most romantic season due to misty mornings and cool evenings, though summer also offers pleasant weather and clearer skies.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q"><h3>Is Kodaikanal good for a budget honeymoon?</h3><span class="faq-toggle">+</span></div>
       <p class="faq-a">Yes. Many memorable experiences, such as Coaker's Walk, a sunset point, or a stroll through Bryant Park, cost very little, making a romantic trip possible on a modest budget.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q"><h3>Which is the most romantic place to stay in Kodaikanal?</h3><span class="faq-toggle">+</span></div>
       <p class="faq-a">Hotels along Lake Road, close to Kodaikanal Lake, are popular with honeymooners for their lake views and walking access to Bryant Park and Coaker's Walk.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q"><h3>Can couples go trekking together in Kodaikanal?</h3><span class="faq-toggle">+</span></div>
       <p class="faq-a">Yes, the trek to Dolphin's Nose is a popular choice for couples comfortable with a moderate walk, ending in a dramatic valley view.</p>
     </div>
-    <div class="faq-item">
+    <div class="faq-item" onclick="toggleFaq(this)">
       <div class="faq-q"><h3>Do I need to book activities like boating or horse riding in advance?</h3><span class="faq-toggle">+</span></div>
       <p class="faq-a">These are usually available on a walk-in basis, but arriving early or checking ahead can help avoid waits during peak season or weekends.</p>
     </div>
   </div>
+</section>
+
+<section id="related-links" class="related-links">
+<div class="container">
+<h2>Related Articles</h2>
+<a href="/kodaikanal/guides/travel-tips/bangalore-to-kodaikanal-road-trip/">➜ Bangalore to Kodaikanal Road Trip Guide</a><br>
+<a href="/kodaikanal/guides/travel-tips/best-cafes-kodaikanal-mountain-view/">➜ Best Cafes in Kodaikanal with Mountain View — 2026 Complete Guide | Hillscape</a><br>
+<a href="/kodaikanal/guides/travel-tips/breakfast-for-bangalore-to-kodaikanal/">➜ Where to Stop for Breakfast on the Bangalore to Kodaikanal Route: 5 Top Highway Food Courts</a><br>
+<a href="/kodaikanal/guides/travel-tips/chennai-to-kodaikanal-driving/">➜ Driving from Chennai to Kodaikanal via Trichy: Road Conditions, Tolls &amp; Pit Stops (2026)</a><br>
+<a href="/kodaikanal/guides/travel-tips/family-resorts-kodaikanal/">➜ Family Friendly Resorts in Kodaikanal (2026) — Best Hotels for Families</a><br>
+<a href="/kodaikanal/guides/travel-tips/kodaikanal-entry-green-tax-e-pass-registration/">➜ Complete Guide to Kodaikanal Entry Green Tax and Vehicle E-Pass Registration (2026)</a><br>
+<a href="/kodaikanal/guides/travel-tips/pack-for-kodaikanal-trip/">➜ What to Pack for a Kodaikanal Trip in Winter Months: Essential Clothing and Layer Guide (2026)</a><br>
+<a href="/kodaikanal/guides/travel-tips/pet-friendly-kodaikanal-resorts/">➜ Pet-Friendly Resorts in Kodaikanal</a><br>
+<a href="/kodaikanal/guides/travel-tips/reach-kodaikanal-by-train/">➜ How to Reach Kodaikanal by Train via Kodai Road Railway Station: Taxi Fares and Bus Timings (2026)</a><br>
+<a href="/kodaikanal/guides/travel-tips/ultra-private-honeymoon-resorts/">➜ 5 Ultra-Private Honeymoon Resorts in Kodaikanal with Jacuzzis and Private Balconies (2026)</a><br>
+<a href="/kodaikanal/guides/travel-tips/valley-view-resorts/">➜ Best Resorts with Valley View in Kodaikanal (2026) — Zacs, Sterling & DVARA Compared</a><br>
+<a href="/kodaikanal/guides/travel-tips/where-to-buy-kodaikanal-homemade-chocolates/">➜ Best Local Spots to Buy Authentic Homemade Chocolates in Kodaikanal Town Center (2026)</a><br>
+<a href="/kodaikanal/guides/travel-tips/where-to-stay-kodaikanal-stays/">➜ Where to Stay in Kodaikanal: Best Areas, Hotels, Resorts and Homestays for Every Budget (2026)</a>
+</div>
 </section>
 
 </main>

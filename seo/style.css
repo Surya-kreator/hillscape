@@ -841,7 +841,8 @@
 #kdk-weather {
     scroll-margin-top: 100px; /* Adjust if you have a sticky header */
 }
-.places-nav {
+
+.items-nav {
     position: sticky;
     top: 55px; /* Height of your header */
     z-index: 999;
@@ -857,7 +858,7 @@
     scrollbar-width: thin;
 }
 
-.places-nav a {
+.items-nav a {
     white-space: nowrap;
     text-decoration: none;
     color: #2d6a4f;
@@ -869,14 +870,11 @@
     transition: .2s;
 }
 
-.places-nav a:hover {
+.items-nav a:hover {
     background: #2d6a4f;
     color: white;
 }
-section[id^="place-"]{
-    scroll-margin-top:140px;
-}
-.places-nav::-webkit-scrollbar {
+.items-nav::-webkit-scrollbar {
     height: 6px;
 }
 
