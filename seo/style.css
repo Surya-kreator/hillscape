@@ -879,6 +879,110 @@
 }
 
 
+.link-card-premium {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  background: linear-gradient(180deg, #ffffff, #fafaf9);
+  border: 1px solid #eaeaea;
+  border-radius: 18px;
+  padding: 16px;
+  max-width: 460px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: box-shadow .3s ease, transform .3s ease, border-color .3s ease;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-card-premium__image-wrap {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.link-card-premium__image {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+
+.link-card-premium__image-border {
+  position: absolute;
+  inset: 0;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.link-card-premium__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  flex: 1;
+}
+
+.link-card-premium__eyebrow {
+  font-size: 10px;
+  font-weight: 600;
+  color: #a8925f;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.link-card-premium__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111111;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.link-card-premium__cta {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.link-card-premium__arrow {
+  transition: transform .25s ease;
+}
+
+.link-card-premium:hover {
+  border-color: #ddd6c8;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.link-card-premium:hover .link-card-premium__arrow {
+  transform: translateX(3px);
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+
+/* Stack into one column on small screens */
+@media (max-width: 768px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width:360px){
   .kdk-w-grid{grid-template-columns:1fr;}
 }
@@ -900,3 +1004,4 @@
     font-size: 0.75rem;
   }
     }
+ .related-width { max-width: 1150px; margin: 0 auto; padding: 0 5vw; }
